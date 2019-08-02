@@ -131,8 +131,6 @@
             top: 70%;
             left: 50%;
             transform: translate(-50%, -50%);
-
-
         }
     </style>
 
@@ -200,8 +198,8 @@
         <div class="menu_page">
             <div class="menu_page_a">
                 <a href="plot.html" target="_self" style="font-size:18px">PLOT</a>
-                <a href="plot.html#synopsis" style="font-size:12px; margin-top:20px;">SYNOPSIS</a>
-                <a href="plot.html#video" style="font-size:12px; margin-top:10px;">VIDEO</a>
+                <a href="plot.html#synopsis" style="font-size:18px; margin-top:20px;">SYNOPSIS</a>
+                <a href="plot.html#video" style="font-size:18px; margin-top:10px;">VIDEO</a>
                 <a href="character.html" target="_self" style="font-size:18px; margin-top:40px;">CHARACTER</a>
                 <a href="character.html#actor" style="font-size:12px; margin-top:20px;">ACTOR</a>
                 <a href="character.html#dinosaur" style="font-size:12px; margin-top:10px;">DINOSAUR</a>
@@ -655,7 +653,6 @@
         crossorigin="anonymous"></script>
 
     <script>
-
         var swiper = new Swiper('.swiper-container', {
             effect: 'coverflow',
             grabCursor: true,
@@ -673,7 +670,13 @@
                 el: '.swiper-pagination',
             },
         });
+
+
     </script>
+
+
+
+
     <script>
         // init
         var controller = new ScrollMagic.Controller();
@@ -696,17 +699,17 @@
     <script>
         var btn = document.querySelector('.menu');
         var menu_page = document.querySelector('.menu_page');
-    
-        btn.onclick=function () {
-            if (menu_page.style.display==="none") {
-                menu_page.style.display="block";
-            } 
+
+        btn.onclick = function () {
+            if (menu_page.style.display === "none") {
+                menu_page.style.display = "block";
+            }
             else {
-                menu_page.style.display="none";
+                menu_page.style.display = "none";
             }
         }
-        
-        </script>
+
+    </script>
 </body>
 
 </html>
