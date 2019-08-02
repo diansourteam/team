@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+    <style>
+        * {
+            border: 1px solid #000;
+        }
+
+
+        .nav {
+            cursor: pointer;
+            width: calc(100% / 12);
+            background-color: cadetblue;
+            float: left;
+            margin-bottom: 200px;
+        }
+
+        .nav img{
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .nav img:hover{
+            width: 100%;
+        }
+
+        .section{
+            float: left;
+            width: 100%;
+            height: 600px;
+            background-color: bisque;
+        }
+
+        .sectionL{
+            position: fixed;
+            left: -900px;
+            width: 30%;
+            display: none;
+            float: left;
+            height: 600px;
+            background-color: rgb(38, 134, 106);
+        }
+
+        .sectionR {
+            width: 30%;
+            display: none;
+            float: right;
+            height: 600px;
+            background-color: rgb(209, 92, 147);
+        }
+        
+        .show {
+            display: block;
+        }
+
+        @keyframes sectionL-show{
+            0%{
+                position: fixed;
+                left: -900px;
+            }
+            100%{
+                position: fixed;
+                left: 0;
+            }
+        }
+
+        @keyframes sectionL-hidden{
+            0%{             
+                position: fixed;
+                left: 0;
+            }
+            100%{
+                position: fixed;
+                left: -900px;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="dinosaur-header">
+            <div class="nav" data-dinosaurid="1">
+                <img src="img/test.jpg" alt="">
+            </div>
+            <div class="nav" data-dinosaurid="2">
+                    <img src="img/test.jpg" alt="">
+            </div>
+            <div class="nav" data-dinosaurid="3">
+                    <img src="img/test.jpg" alt="">
+            </div>
+            <div class="nav" data-dinosaurid="4">
+                    <img src="img/test.jpg" alt="">
+            </div>
+            <div class="nav" data-dinosaurid="5">
+                    <img src="img/test.jpg" alt="">
+            </div>
+            <div class="nav" data-dinosaurid="6">
+                    <img src="img/test.jpg" alt="">
+            </div>
+            <div class="nav" data-dinosaurid="7">
+                    <img src="img/test.jpg" alt="">
+            </div>
+            <div class="nav" data-dinosaurid="8">
+                    <img src="img/test.jpg" alt="">
+            </div>
+            <div class="nav" data-dinosaurid="9">
+                    <img src="img/test.jpg" alt="">
+            </div>
+            <div class="nav" data-dinosaurid="10">
+                    <img src="img/test.jpg" alt="">
+            </div>
+            <div class="nav" data-dinosaurid="11">
+                    <img src="img/test.jpg" alt="">
+            </div>
+            <div class="nav" data-dinosaurid="12">
+                    <img src="img/test.jpg" alt="">
+            </div>
+        </div>
+        <div class="section">
+            <div class="sectionL show" style="background-image: url(img/test.jpg)" data-dinosaurid="1"></div>
+            <div class="sectionL" data-dinosaurid="2"></div>
+            <div class="sectionL" data-dinosaurid="3"></div>
+            <div class="sectionL" data-dinosaurid="4"></div>
+            <div class="sectionL" data-dinosaurid="5"></div>
+            <div class="sectionL" data-dinosaurid="6"></div>
+            <div class="sectionL" data-dinosaurid="7"></div>
+            <div class="sectionL" data-dinosaurid="8"></div>
+            <div class="sectionL" data-dinosaurid="9"></div>
+            <div class="sectionL" data-dinosaurid="10"></div>
+            <div class="sectionL" data-dinosaurid="11"></div>
+            <div class="sectionL" data-dinosaurid="12"></div>
+
+            <div class="sectionR show" data-dinosaurid="1">
+                
+            </div>
+            <div class="sectionR" data-dinosaurid="2">
+                
+            </div>
+            <div class="sectionR" data-dinosaurid="3">
+                
+            </div>
+            <div class="sectionR" data-dinosaurid="4">
+                
+            </div>
+            <div class="sectionR" data-dinosaurid="5">
+                
+            </div>
+            <div class="sectionR" data-dinosaurid="6">
+                
+            </div>
+            <div class="sectionR" data-dinosaurid="7">
+                
+            </div>
+            <div class="sectionR" data-dinosaurid="8">
+                
+            </div>
+            <div class="sectionR" data-dinosaurid="9">
+                
+            </div>
+            <div class="sectionR" data-dinosaurid="10">
+                
+            </div>
+            <div class="sectionR" data-dinosaurid="11">
+                
+            </div>
+            <div class="sectionR" data-dinosaurid="12">
+                
+            </div>
+        </div>
+
+        
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+        <script>
+            // 點擊恐龍圖片會出現以下效果
+                $(".nav").click(function () {
+                    var dinosaurid = this.dataset.dinosaurid;
+                // 下面的介紹先隱藏&nav高度還原
+                    $(".nav img").css({'width' : ''});
+                    $(".sectionL ,.sectionR").removeClass("show");
+                //選取的恐龍，顯示相關內容，用dataid做選取
+                    $(".sectionL[data-dinosaurid=" + dinosaurid + "]").addClass("show");
+                    $(".sectionR[data-dinosaurid=" + dinosaurid + "]").addClass("show");
+                    // $(".sectionL[data-dinosaurid=" + dinosaurid + "]").
+                // 選取的圖片高度增加，有BUG選取太快會選到多個，因此速度調整
+
+                $(".sectionL").css({'animation' : 'sectionL-hidden ,3s'});
+                $(".nav[data-dinosaurid=" + dinosaurid + "] img").css({'width' : '100%'});
+                
+                });
+        </script>
+    </div>
+</body>
+
+</html>

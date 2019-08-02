@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .grid {
+            position: relative;
+            max-width: 1140px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .item {
+            /* 外層 */
+            position: absolute;
+            z-index: 1;
+            width: 300px;
+            height: 700px;
+            margin: 10px 20px;
+        }
+        .item:nth-child(3n){
+            width: 350px;
+            height: 750px;
+        }
+        
+
+        .item-content {
+            /* 內容 */
+            font-size: 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .item.muuri-item-dragging .item-content {
+            /* 拖曳中內容 */
+            background: rgb(77, 77, 77);
+        }
+
+        .item.muuri-item-releasing .item-content {
+            /* 拖曳完成內容 */
+            background: rgb(251, 251, 251);
+        }
+
+        .item.muuri-item-hidden {
+            z-index: 0;
+        }
+
+        .item.muuri-item-dragging {
+            /* 拖曳中 */
+            z-index: 3;
+        }
+
+        .item.muuri-item-releasing {
+            /* 拖曳完成 */
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="item">
+            <div class="item-content">
+                <img style="width:100%;" src="img/01ChrisPratt.jpg" alt="">
+                <h3 style="font-size: 30px">Owen Grady</h3>
+                <p>Chris Pratt飾
+                    前美國海軍中尉兼恐龍馴獸師
+                    訓練過侏羅紀世界的迅猛龍群
+                    樂園失事後就隱居起來，
+                    直到被克萊兒請去拯救其他恐龍。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <img style="width:100%;" src="img/02BryceDallasHoward.jpg" alt="">
+                <h3 style="font-size: 30px">Claire Dearing</h3>
+                <p>Bryce Dallas Howard飾
+                        侏羅紀世界的前營運主管
+                        事件過後變成行動主義者，
+                        組成恐龍保護團體以拯救
+                        棄置於舊樂園島上的恐龍。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <img style="width:100%;" src="img/03DaniellaPineda.jpg" alt="">
+                <h3 style="font-size: 30px">Zia Rodriguez</h3>
+                <p>Daniella Pineda飾
+                        前美國海軍中尉兼恐龍馴獸師
+                        訓練過侏羅紀世界的迅猛龍群
+                        樂園失事後就隱居起來，
+                        直到被克萊兒請去拯救其他恐龍。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <img style="width:100%;" src="img/04Justice Smith.jpg" alt="">
+                <h3 style="font-size: 30px">Franklin</h3>
+                <p>Justice Smith飾
+                        侏羅紀世界的前技術員
+                        神經質，如今加入恐龍保護團體，
+                        及加入這次拯救行動。軍中尉兼恐龍馴獸師
+                    訓練過侏羅紀世界的迅猛龍群
+                    樂園失事後就隱居起來，
+                    直到被克萊兒請去拯救其他恐龍。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <img style="width:100%;" src="img/05RafeSpall.jpg" alt="">
+                <h3 style="font-size: 30px">Eli Mills</h3>
+                <p>Rafe Spall飾
+                        班傑明·洛克伍德的助手
+                        野心甚大，為金錢不擇手段，
+                        背著洛克伍德意圖走私
+                        並拍賣島上的恐龍
+                        以謀取龐大利益。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <img style="width:100%;" src="img/06IsabellaSermon.jpg" alt="">
+                <h3 style="font-size: 30px">Maisie Lockwood</h3>
+                <p>Isabella Sermon飾
+                        班傑明的外孫女
+                        聰明活潑的小女孩，
+                        實為班傑明
+                        車禍過世女兒的複製人。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <img style="width:100%;" src="img/07JeffGoldblum.jpg" alt="">
+                <h3 style="font-size: 30px">Dr. Ian Malcolm</h3>
+                <p>Jeff Goldblum 飾
+                        研究混沌理論的數學家，
+                        二十年前侏羅紀公園的
+                        參與者兼倖存者，
+                        兩次從恐龍災難死裡逃生後，
+                        一直想辦法抵制類似事件。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <img style="width:100%;" src="img/08JamesCromwell.jpg" alt="">
+                <h3 style="font-size: 30px">Benjamin 
+                        Lockwood</h3>
+                <p>James Cromwell飾
+                        約翰·哈蒙德的生前搭檔，
+                        很久以前與哈蒙德分道揚鑣，
+                        研究領域為恐龍複製技術。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <img style="width:100%;" src="img/09GeraldineChaplin.jpg" alt="">
+                <h3 style="font-size: 30px">Lrisy</h3>
+                <p>Geraldine Chaplin飾
+                        洛克伍德莊園女管家，
+                        守護著洛克伍德家的秘密。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <img style="width:100%;" src="img/10TedLevine.png" alt="">
+                <h3 style="font-size: 30px">Ken Wheatley</h3>
+                <p>Ted Levine飾
+                        受僱於米爾斯的菁英傭兵，
+                        負責指揮努布拉島的救援行動，
+                        喜歡摘取獵物牙齒作紀念。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <img style="width:100%;" src="img/11TobyJones.png" alt="">
+                <h3 style="font-size: 30px">Gunnar Eversoll</h3>
+                <p>Toby Jones飾
+                        拍賣官
+                        被米爾斯邀請過來，
+                        於洛克伍德莊園裡
+                        主持恐龍拍賣會。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <img style="width:100%;" src="img/12BDWong.jpg" alt="">
+                <h3 style="font-size: 30px">Dr. Henry Wu</h3>
+                <p>BD Wong飾
+                        遺傳學家
+                        曾身為兩個樂園的科研隊伍主力
+                        這次幫米爾斯設計出全新的恐龍</p>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- web-animations v2.3.1 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js"></script>
+    <!-- hammer.js v2.0.8 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <!-- Muuri v0.5.3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.5.3/muuri.min.js"></script>
+    <script type="text/javascript">
+        var grid = new Muuri(".grid", {
+            // 參數設定[註1]
+            dragEnabled: true
+        });
+        [].slice.call(document.querySelectorAll(".item"))
+            .forEach(function (elem) {
+                elem.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    
+                });
+            });
+            
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #1c1c1c;
+        }
+
+        .swiper-container {
+            max-width: 1200px;
+            height: 100vh;
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            max-width: 30%;
+            max-height: 700px;
+        }
+
+        #pinContainer {
+            width: 1200px;
+            height: 100vh;
+            margin: 0 auto;
+            overflow: hidden;
+
+        }
+
+        .panel {
+            height: 100vh;
+            width: 1200px;
+            position: absolute;
+            background-color: #1c1c1c;  
+        }
+
+        .jurassicL {
+            margin-top: 25px;
+            width: 50%;
+            max-height: 100vh;
+            float: left;
+            overflow: hidden;
+        }
+
+
+        .jurassicL img {
+            max-width: 500px;
+            background-size: cover;
+        }
+
+        .jurassicR {
+            margin-top: 25px;
+            width: 50%;
+            float: right;
+            max-height: 100vh;
+            overflow: hidden;
+        }
+
+
+ 
+        .p-style {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .panel h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+            font-size: 50px;
+        }
+
+        .panel p {
+            font-size: 18px;
+            color: white;
+            line-height: 27px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .img-sec{
+            text-align: center;
+            background-size: cover;
+        }
+
+        .img-sec img {
+           
+            position: absolute;
+            max-width: 370px;
+            overflow: hidden;
+        }
+
+        .img1 img {
+            transform: translate(-300px, 0);
+            
+        }
+
+        .img2 img {
+            transform: translate(-250px, 200px);
+            
+        }
+
+        .img3 img {
+            transform: translate(-100px, 100px);
+            
+        }
+
+        footer{
+            background-color: blueviolet;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(img/jurassic-park01.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/jurassic-park02.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/jurassic-park03.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/jurassic_world01.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/jurassic_world2.jpg)"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </header>
+    <div id="pinContainer">
+        </section>
+        <section class="panel jurassic1">
+            <h1>侏羅紀公園</h1>
+            <div class="jurassicL">
+                <div class="img-tit">
+                    <img src="img/jurassic-park01.jpg" alt="">
+                </div>
+            </div>
+            <div class="jurassicR">
+                    <div class="sen-text">
+                            <p class="p-style">本片加上前所未見，<br>
+                                更令人驚嘆和駭人的全新品種。<br>
+                                歡迎蒞臨【侏羅紀世界：殞落國度】。<br>
+                                本片除了【侏羅紀世界】原班人馬<br>
+                                克里斯普拉特、布萊絲達拉斯霍華、<br>
+                                黃榮亮、傑夫高布倫之外，<br>
+                                還加入新的演員包括詹姆斯克倫威爾、<br>
+                                泰德李凡、陶比瓊斯、瑞夫史波…等。<br>
+                                本部史詩動作冒險鉅片由【浩劫奇蹟】<br>
+                                胡恩安東尼奧巴亞納執導。</p>
+                        </div>
+                <div class="img-sec">
+                    <div class="img1">
+                        <img src="img/jurassic-park-01.jpg" alt="">
+                    </div>
+                    <div class="img2">
+                        <img src="img/jurassic-park-02.jpg" alt="">
+                    </div>
+                    <div class="img3">
+                        <img src="img/jurassic-park-03.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel jurassic2">
+            <h1>侏羅紀公園_失落的世界</h1>
+            <div class="jurassicL">
+                <div class="img-tit">
+                    <img src="img/jurassic-park02.jpg" alt="">
+                </div>
+            </div>
+            <div class="jurassicR">
+                    <div class="sen-text">
+                            <p class="p-style">本片加上前所未見，<br>
+                                更令人驚嘆和駭人的全新品種。<br>
+                                歡迎蒞臨【侏羅紀世界：殞落國度】。<br>
+                                本片除了【侏羅紀世界】原班人馬<br>
+                                克里斯普拉特、布萊絲達拉斯霍華、<br>
+                                黃榮亮、傑夫高布倫之外，<br>
+                                還加入新的演員包括詹姆斯克倫威爾、<br>
+                                泰德李凡、陶比瓊斯、瑞夫史波…等。<br>
+                                本部史詩動作冒險鉅片由【浩劫奇蹟】<br>
+                                胡恩安東尼奧巴亞納執導。</p>
+                        </div>
+                <div class="img-sec">
+                    <div class="img1"></div>
+                    <div class="img2"></div>
+                    <div class="img3"></div>
+                </div>
+        </section>
+
+        <section class="panel jurassic3">
+                <h1>侏羅紀公園3</h1>
+            <div class="jurassicL">
+                <div class="img-tit">
+                    <img src="img/jurassic-park03.jpg" alt="">
+                </div>
+            </div>
+            <div class="jurassicR">
+                    <div class="sen-text">
+                            <p class="p-style">本片加上前所未見，<br>
+                                更令人驚嘆和駭人的全新品種。<br>
+                                歡迎蒞臨【侏羅紀世界：殞落國度】。<br>
+                                本片除了【侏羅紀世界】原班人馬<br>
+                                克里斯普拉特、布萊絲達拉斯霍華、<br>
+                                黃榮亮、傑夫高布倫之外，<br>
+                                還加入新的演員包括詹姆斯克倫威爾、<br>
+                                泰德李凡、陶比瓊斯、瑞夫史波…等。<br>
+                                本部史詩動作冒險鉅片由【浩劫奇蹟】<br>
+                                胡恩安東尼奧巴亞納執導。</p>
+                        </div>
+                <div class="img-sec">
+                    <div class="img1"></div>
+                    <div class="img2"></div>
+                    <div class="img3"></div>
+                </div>
+        </section>
+
+        <section class="panel jurassic4">
+                <h1>侏羅紀世界</h1>
+            <div class="jurassicL">
+                <div class="img-tit">
+                    <img src="img/jurassic_world01.jpg" alt="">
+                </div>
+            </div>
+            <div class="jurassicR">
+                    <div class="sen-text">
+                            
+                            <p class="p-style">本片加上前所未見，<br>
+                                更令人驚嘆和駭人的全新品種。<br>
+                                歡迎蒞臨【侏羅紀世界：殞落國度】。<br>
+                                本片除了【侏羅紀世界】原班人馬<br>
+                                克里斯普拉特、布萊絲達拉斯霍華、<br>
+                                黃榮亮、傑夫高布倫之外，<br>
+                                還加入新的演員包括詹姆斯克倫威爾、<br>
+                                泰德李凡、陶比瓊斯、瑞夫史波…等。<br>
+                                本部史詩動作冒險鉅片由【浩劫奇蹟】<br>
+                                胡恩安東尼奧巴亞納執導。</p>
+                        </div>
+                <div class="img-sec">
+                    <div class="img1"></div>
+                    <div class="img2"></div>
+                    <div class="img3"></div>
+                </div>
+        </section>
+
+        <section class="panel jurassic5">
+             <h1>侏羅紀世界:殞落國度</h1>
+            <div class="jurassicL">
+                <div class="img-tit">
+                    <img src="img/jurassic_world2.jpg" alt="">
+                </div>
+            </div>
+            <div class="jurassicR">
+                <div class="sen-text">
+                    
+                    <p class="p-style">本片加上前所未見，更令人驚嘆和駭人的全新品種。<br>
+                        歡迎蒞臨【侏羅紀世界：殞落國度】。<br>
+                        本片除了【侏羅紀世界】原班人馬克里斯普拉特、布萊絲達拉斯霍華、<br>
+                        黃榮亮、傑夫高布倫之外，還加入新的演員包括詹姆斯克倫威爾、<br>
+                        泰德李凡、陶比瓊斯、瑞夫史波…等。<br>
+                        本部史詩動作冒險鉅片由【浩劫奇蹟】胡恩安東尼奧巴亞納執導。</p>
+                </div>
+                <div class="img-sec">
+                    <div class="img1">
+                        <img src="img/jurassic_world2-01.jpg" alt="">
+                    </div>
+                    <div class="img2">
+                        <img src="img/jurassic_world2-03.jpg" alt="">
+                    </div>
+                    <div class="img3">
+                        <img src="img/jurassic_world2-02.jpg" alt="">
+                    </div>
+                </div>
+        </section>
+    </div>
+    <footer>
+        <h1>END</h1>
+    </footer>
+
+   
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop: true,
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+
+    <script>
+
+        // init
+
+
+        var controller = new ScrollMagic.Controller();
+
+        // define movement of panels
+        var wipeAnimation = new TimelineMax()
+            .fromTo("section.panel.jurassic2", 1, { x: "200%" }, { x: "0%", ease: Linear.easeNone })  // in from left
+            .fromTo("section.panel.jurassic3", 1, { x: "-200%" }, { x: "0%", ease: Linear.easeNone })
+            .fromTo("section.panel.jurassic4", 1, { y: "200%" }, { y: "0%", ease: Linear.easeNone })  // in from right
+            .fromTo("section.panel.jurassic5", 1, { y: "-200%" }, { y: "0%", ease: Linear.easeNone }); // in from top
+        // create scene to pin and link animation
+        var scene = new ScrollMagic.Scene({
+            triggerElement: "#pinContainer",
+            triggerHook: "onLeave",
+            duration: "500%" //頁面切換時間
+        })
+            .setPin("#pinContainer")
+            .setTween(wipeAnimation)
+            .addTo(controller);
+        
+
+
+
+    </script>
+
+</body>
+
+
+
+</html>
