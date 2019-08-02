@@ -1,5 +1,5 @@
 * {
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
     box-sizing: border-box;
     font-family: 'Lithos Pro', '微軟正黑體';
 }
@@ -262,7 +262,9 @@ footer hr{
         padding: 0;
     }
     footer h3{
+        width: 70%;
         font-size: 20px;
+        margin: 0 auto ;
     }
     .footer_B{
         width: 100%;

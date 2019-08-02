@@ -17,23 +17,18 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding-bottom: 850px;
+            padding-top: 250px;
+            padding-bottom: 750px;
         }
-
         .main {
             width: 100%;
             max-width: 1200px;
         }
-
-        .main .commodity {
-            width: 300px;
-            height: 300px;
-            background-position: center;
-            background-size: cover;
+        .commodity {
+            width: 25%;
             float: left;
             position: relative;
         }
-
         .commodity::before {
             content: attr(data-th)"";
             position: absolute;
@@ -47,27 +42,21 @@
             padding: 30px;
             opacity: 0;
         }
-
         .commodity:hover::before {
             animation: hover_before 1s ease forwards;
         }
-
-
         @keyframes hover_before {
             0% {
                 opacity: 0;
             }
-
             100% {
                 opacity: 0.85;
             }
         }
-
         #decor {
             clear: both;
             padding: 120px 0;
         }
-
         .mainL {
             width: 32.75%;
             height: 600px;
@@ -80,12 +69,23 @@
             line-height: 40px;
             letter-spacing: 2px;
         }
-
         .mainR {
             background-image: url(img/09Bayona.jpg);
             width: 67.25%;
             height: 600px;
             float: left;
+        }
+        /* 手機板RWD */
+        @media(max-width:1200px){
+            .container{
+                padding: 0;
+            }
+            .commodity{
+                width: 50%;
+            }
+           #decor{
+               display: none;
+           }
         }
     </style>
 </head>
@@ -395,14 +395,38 @@
     </nav>
     <div class="container">
         <div class="main" id="merchandies">
-            <div data-th="商品資訊1" class="commodity" style="background-image: url(img/commodity01.jpg)"></div>
-            <div data-th="商品資訊2" class="commodity" style="background-image: url(img/commodity02.png)"></div>
-            <div data-th="商品資訊3" class="commodity" style="background-image: url(img/commodity03.jpeg)"></div>
-            <div data-th="商品資訊4" class="commodity" style="background-image: url(img/commodity04.jpg)"></div>
-            <div data-th="商品資訊5" class="commodity" style="background-image: url(img/commodity05.jpg)"></div>
-            <div data-th="商品資訊6" class="commodity" style="background-image: url(img/commodity06.jpg)"></div>
-            <div data-th="商品資訊7" class="commodity" style="background-image: url(img/commodity07.jpg)"></div>
-            <div data-th="商品資訊8" class="commodity" style="background-image: url(img/commodity08.gif)"></div>
+            <div data-th="商品資訊1" class="commodity">
+            <img src="img/commodity01.jpg" width="100%" alt="">
+        </div>
+        <div class="main" id="merchandies">
+            <div data-th="商品資訊2" class="commodity">
+            <img src="img/commodity02.jpg" width="100%" alt="">
+        </div>
+        <div class="main" id="merchandies">
+            <div data-th="商品資訊3" class="commodity">
+            <img src="img/commodity03.jpg" width="100%" alt="">
+        </div>
+        <div class="main" id="merchandies">
+            <div data-th="商品資訊4" class="commodity">
+            <img src="img/commodity04.jpg" width="100%" alt="">
+        </div>
+        <div class="main" id="merchandies">
+            <div data-th="商品資訊5" class="commodity">
+            <img src="img/commodity05.jpg" width="100%" alt="">
+        </div>
+        <div class="main" id="merchandies">
+            <div data-th="商品資訊6" class="commodity">
+            <img src="img/commodity06.jpg" width="100%" alt="">
+        </div>
+        <div class="main" id="merchandies">
+            <div data-th="商品資訊7" class="commodity">
+            <img src="img/commodity07.jpg" width="100%" alt="">
+        </div>
+        <div class="main" id="merchandies">
+            <div data-th="商品資訊8" class="commodity">
+            <img src="img/commodity08.jpg" width="100%" alt="">
+        </div>
+           
         </div>
         <div class="main">
             <div id="decor"><img style="width: 100%" src="img/test.svg" alt="">
@@ -467,7 +491,6 @@
     <script>
     var btn = document.querySelector('.menu');
     var menu_page = document.querySelector('.menu_page');
-
     btn.onclick=function () {
         if (menu_page.style.display==="none") {
             menu_page.style.display="block";
