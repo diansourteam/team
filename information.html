@@ -18,17 +18,19 @@
             max-width: 1200px;
             margin: 0 auto;
             padding-top: 250px;
-            padding-bottom: 750px;
         }
+
         .main {
             width: 100%;
             max-width: 1200px;
         }
+
         .commodity {
             width: 25%;
             float: left;
             position: relative;
         }
+
         .commodity::before {
             content: attr(data-th)"";
             position: absolute;
@@ -37,55 +39,147 @@
             transform: translate(-50%, -50%);
             background-color: white;
             width: 100%;
-            height: 100%;
+            height: 99%;
             box-sizing: border-box;
             padding: 30px;
             opacity: 0;
         }
+
         .commodity:hover::before {
             animation: hover_before 1s ease forwards;
         }
+
         @keyframes hover_before {
             0% {
                 opacity: 0;
             }
+
             100% {
                 opacity: 0.85;
             }
         }
+
         #decor {
             clear: both;
             padding: 120px 0;
         }
+
+        #director {
+            position: relative;
+        }
+
         .mainL {
             width: 32.75%;
             height: 600px;
             background-color: #596E7C;
-            float: left;
             padding: 20px 0 0 10px;
             writing-mode: vertical-lr;
             font-size: 18px;
             color: white;
             line-height: 40px;
             letter-spacing: 2px;
+            float: left;
+
         }
+
         .mainR {
-            background-image: url(img/09Bayona.jpg);
             width: 67.25%;
+            background-image: url(img/09Bayona.jpg);
             height: 600px;
+            background-size: cover;
+            background-position: center;
             float: left;
         }
+
+        .mobile_mainR {
+            display: none;
+            
+        }
+        .mobile_mainL{
+            width: 70%;
+            color: white;
+            position: absolute;
+            left: 15%;
+           bottom: -10%;
+        display: none;
+        }
+
+        #top_h3,
+        #mid_h3{
+            width: 150px;
+            color: white;
+            margin: 45px auto;
+            display: none;
+        }
+        #bottom_h3{
+            width: 150px;
+            color: white;
+            margin: 110px auto 45px auto;
+            display: none;
+        }
+
+        #top_hr {
+            width: 80%;
+            margin-bottom: 45px;
+            display: none;
+        }
+
+        #mid_hr {
+            width: 80%;
+            margin-bottom: 90px;
+            display: none;
+        }
+        #bottom_hr {
+            width: 80%;
+            margin-bottom: 90px;
+            display: none;
+        }
+
+        #mid_h3 {
+            margin-top: 45px;
+        }
+
+        .clear {
+            clear: both;
+        }
+        .information{
+            width: 230px;
+            margin: 45px auto;
+            padding: 5px;
+            display: none;
+        }
+
         /* 手機板RWD */
-        @media(max-width:1200px){
-            .container{
+        @media(max-width:1400px) {
+            .container {
                 padding: 0;
+                padding-bottom: 0;
             }
-            .commodity{
+
+            #top_h3,
+            #top_hr,
+            #mid_h3,
+            #mid_hr,
+            #bottom_h3,#bottom_hr,.information {
+                display: block;
+            }
+
+            .commodity {
                 width: 50%;
             }
-           #decor{
-               display: none;
-           }
+
+            #decor {
+                display: none;
+            }
+
+            .mainL,
+            .mainR {
+                display: none;
+            }
+
+            .mobile_mainR,.mobile_mainL {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -93,10 +187,12 @@
 <body>
     <nav>
         <button class="menu btn">
-                <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="70px" height="35px" viewBox="0 0 70 35.385" style="enable-background:new 0 0 70 35.385;" xml:space="preserve">
-           <g>
-               <path class="st0 btn" d="M69.961,20.363c0.283,0.67-1.066-0.101-1.427-0.202c-2.706,0.272-5.345,0.21-8.052,0.482
+            <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="70px" height="35px" viewBox="0 0 70 35.385"
+                style="enable-background:new 0 0 70 35.385;" xml:space="preserve">
+                <g>
+                    <path class="st0 btn"
+                        d="M69.961,20.363c0.283,0.67-1.066-0.101-1.427-0.202c-2.706,0.272-5.345,0.21-8.052,0.482
                    c-0.188,0.416,0.829-0.104,1.018,0.431c-1.523,0.075-2.954-0.322-4.291-1.199c-0.131,0.077,0.006,0.24,0.049,0.368
                    c-1.832-0.231-3.839,0.441-5.615-0.069c-3.11-2.006-7.113,0.479-10.453-0.373c-0.13,0.077,0.01,0.24,0.052,0.372
                    c-0.457,0.046-0.833-0.328-1.291-0.279c-0.448,0.217-0.833,0.451-0.775,0.823c-0.471-0.286-0.871-0.946-1.39-1.017
@@ -112,8 +208,8 @@
                    c1.508,0.622,3.081,0.917,4.659,1.191c0.539-0.146-0.206-0.692,0.405-0.821c0.721,0.696,1.5,1.095,2.447,0.636
                    c0.3-0.413-0.471-0.424-0.562-0.88c1.013,0.244,1.923,0.996,2.869,1.587c0.141-0.31-0.379-0.824-0.379-1.178
                    c0.669,0.337,1.231,1.199,1.989,1.083c0.511-0.355-0.269-1.107,0.17-1.485c0.629,0.023,0.391,1.585,0.972,0.654
-                   c0.154,0.775,0.921,1.842,1.583,1.903c0.668-0.275-0.063-0.895-0.377-1.178C63.311,17.29,66.861,17.692,69.961,20.363z"/>
-               <path class="st0 btn" d="M54.582,3.48c0.375,0.58,2.001,0.189,2.901,0.183c-1.713,1.074-3.618,0.305-5.514,1.26
+                   c0.154,0.775,0.921,1.842,1.583,1.903c0.668-0.275-0.063-0.895-0.377-1.178C63.311,17.29,66.861,17.692,69.961,20.363z" />
+                    <path class="st0 btn" d="M54.582,3.48c0.375,0.58,2.001,0.189,2.901,0.183c-1.713,1.074-3.618,0.305-5.514,1.26
                    c-1.281-1.054-3.323-1.159-4.692,0.21c-0.727-0.44-1.521-0.541-2.483,0.186c-0.457-0.369-0.915-0.732-1.388-1.018
                    c-0.157,0.151,0.117,0.429,0.234,0.666c-1.865-1.499-4.4,0.389-6.443-0.206c-0.328,0.342,0.411,0.268,0.466,0.732
                    c-1.307-0.48-3.664-0.61-4.507,0.505c-2.229-1.504-5.039-0.094-7.458-0.636c0.114,1.646-2.703-0.436-4.09,0.87
@@ -130,8 +226,8 @@
                    c0.154-0.129-0.1-0.537-0.277-0.439c0.428-0.714,1.603,0.111,2.3,0.117c1.09-0.775,1.945-0.334,2.676,0.701
                    c0.427,0.095,0.166-0.108,0.548-0.303c0.572,0.828,1.301,0.85,2.034,0.858c0.25-0.513-0.62-0.517-0.791-0.95
                    c2.041,1.031,4.487-0.013,6.586,0.723c-0.148-0.272-0.365-0.218-0.509-0.509c1,0.102,1.907,0.672,2.817,1.217
-                   c1.299-0.712,3.096,0.067,4.651,0.01C56.045,3.094,55.24,3.658,54.582,3.48z"/>
-               <path class="st0 btn" d="M65.307,35.234c-2.519,0.481-6.108-0.285-9.124-0.911c-1.571,0.766-3.175,0.951-4.785,0.066
+                   c1.299-0.712,3.096,0.067,4.651,0.01C56.045,3.094,55.24,3.658,54.582,3.48z" />
+                    <path class="st0 btn" d="M65.307,35.234c-2.519,0.481-6.108-0.285-9.124-0.911c-1.571,0.766-3.175,0.951-4.785,0.066
                    c-0.464,0.094-0.223,0.406-0.593,0.526c-1.811-0.744-3.85-0.332-5.669-1.029c-0.333,0.229,0.35,0.147,0.374,0.586
                    c-1.332-0.494-2.668-0.945-4.239-0.236c-2.173-0.96-4.383-1.764-6.954-0.717c-0.222-0.109-0.43-0.296-0.605-0.661
                    c-2.696-0.997-5.751-0.197-8.387-1.511c-0.643,0.354-1.285,0.707-1.926,1.062c-0.728-0.852-2.28-0.829-2.9-0.178
@@ -143,25 +239,25 @@
                    c0.105-1.103,2.494,0.531,3.461,1.062c0.343-0.209-0.129-0.669-0.056-0.963c1.433,1.722,4.006,0.665,5.479,0.147
                    c0.705,0.359,1.443,0.54,2.082,1.23c1.897-0.288,4.564,0.657,6.405,1.02c-0.144-0.078-0.294-0.158-0.417-0.363
                    c0.917-0.095,1.502,1.482,2.539,0.779c1.21,1.305,2.8,0.696,4.152,1.274c-0.287,0.618-1.291-0.46-1.978,0.104
-                   C63.486,34.94,64.423,34.942,65.307,35.234z"/>
-           </g>
-           </svg> 
+                   C63.486,34.94,64.423,34.942,65.307,35.234z" />
+                </g>
+            </svg>
         </button>
         <div class="menu_page">
             <div class="menu_page_a">
                 <a href="plot.html" target="_self" style="font-size:18px">PLOT</a>
-                <a href="plot.html#synopsis"style="font-size:12px; margin-top:20px;">SYNOPSIS</a>
-                <a href="plot.html#video"style="font-size:12px; margin-top:10px;">VIDEO</a>
-                <a href="character.html" target="_self"style="font-size:18px; margin-top:40px;">CHARACTER</a>
-                <a href="character.html#actor"style="font-size:12px; margin-top:20px;">ACTOR</a>
-                <a href="character.html#dinosaur"style="font-size:12px; margin-top:10px;">DINOSAUR</a>
-                <a href="series.html" target="_self"style="font-size:18px; margin-top:40px;">SERIES</a>
-                <a href="series.html#filmSeries"style="font-size:12px; margin-top:20px;">FILM SERIES</a>
-                <a href="information.html" target="_self"style="font-size:18px; margin-top:40px;">INFORMATION</a>
-                <a href="information.html#merchandies"style="font-size:12px; margin-top:20px;">MERCHANDIES</a>
-                <a href="information.html#director"style="font-size:12px; margin-top:10px;">DIRECTOR</a>
+                <a href="plot.html#synopsis" style="font-size:12px; margin-top:20px;">SYNOPSIS</a>
+                <a href="plot.html#video" style="font-size:12px; margin-top:10px;">VIDEO</a>
+                <a href="character.html" target="_self" style="font-size:18px; margin-top:40px;">CHARACTER</a>
+                <a href="character.html#actor" style="font-size:12px; margin-top:20px;">ACTOR</a>
+                <a href="character.html#dinosaur" style="font-size:12px; margin-top:10px;">DINOSAUR</a>
+                <a href="series.html" target="_self" style="font-size:18px; margin-top:40px;">SERIES</a>
+                <a href="series.html#filmSeries" style="font-size:12px; margin-top:20px;">FILM SERIES</a>
+                <a href="information.html" target="_self" style="font-size:18px; margin-top:40px;">INFORMATION</a>
+                <a href="information.html#merchandies" style="font-size:12px; margin-top:20px;">MERCHANDIES</a>
+                <a href="information.html#director" style="font-size:12px; margin-top:10px;">DIRECTOR</a>
             </div>
-        </div> 
+        </div>
         </div>
         <div class="logo"><a href="index.html" target="_self"><img src="img/Jurassic_icon2.png" alt=""></a></div>
         <div class="nav_item">
@@ -394,45 +490,46 @@
         </div>
     </nav>
     <div class="container">
-        <div class="main" id="merchandies">
+        <h3 id="top_h3">MERCHANDIES</h3>
+        <hr id="top_hr">
+        </hr>
+        <div class="main">
             <div data-th="商品資訊1" class="commodity">
-            <img src="img/commodity01.jpg" width="100%" alt="">
-        </div>
-        <div class="main" id="merchandies">
+                <img src="img/commodity01.jpg" width="100%" alt="">
+            </div>
             <div data-th="商品資訊2" class="commodity">
-            <img src="img/commodity02.jpg" width="100%" alt="">
-        </div>
-        <div class="main" id="merchandies">
+                <img src="img/commodity02.jpg" width="100%" alt="">
+            </div>
             <div data-th="商品資訊3" class="commodity">
-            <img src="img/commodity03.jpg" width="100%" alt="">
-        </div>
-        <div class="main" id="merchandies">
+                <img src="img/commodity03.jpg" width="100%" alt="">
+            </div>
             <div data-th="商品資訊4" class="commodity">
-            <img src="img/commodity04.jpg" width="100%" alt="">
-        </div>
-        <div class="main" id="merchandies">
+                <img src="img/commodity04.jpg" width="100%" alt="">
+            </div>
             <div data-th="商品資訊5" class="commodity">
-            <img src="img/commodity05.jpg" width="100%" alt="">
-        </div>
-        <div class="main" id="merchandies">
+                <img src="img/commodity05.jpg" width="100%" alt="">
+            </div>
             <div data-th="商品資訊6" class="commodity">
-            <img src="img/commodity06.jpg" width="100%" alt="">
-        </div>
-        <div class="main" id="merchandies">
+                <img src="img/commodity06.jpg" width="100%" alt="">
+            </div>
             <div data-th="商品資訊7" class="commodity">
-            <img src="img/commodity07.jpg" width="100%" alt="">
-        </div>
-        <div class="main" id="merchandies">
+                <img src="img/commodity07.jpg" width="100%" alt="">
+            </div>
             <div data-th="商品資訊8" class="commodity">
-            <img src="img/commodity08.jpg" width="100%" alt="">
+                <img src="img/commodity08.jpg" width="100%" alt="">
+            </div>
         </div>
-           
-        </div>
+
+        <div class="clear"></div>
+        <h3 id="mid_h3">DIRECTOR</h3>
+
+        <hr id="mid_hr">
         <div class="main">
             <div id="decor"><img style="width: 100%" src="img/test.svg" alt="">
             </div>
         </div>
-        <div class="main">
+
+        <div class="main" id="director">
             <div class="mainL">
                 <p>
                     <br>胡安·安東尼奧·巴亞納特別擅長驚悚和災難題材，
@@ -442,8 +539,32 @@
                     <br>故事煽情催淚，動靜平分秋色，細節處理得非常精緻到位 。
                 </p>
             </div>
-            <div class="mainR" id="director"></div>
+            <div class="mainR"></div>
+            <div class="mobile_mainR">
+                <img src="img/09Bayona.jpg" width="100%" alt="">
+            </div>
+            <div class="mobile_mainL">
+                <p>
+                    <br>胡安·安東尼奧·巴亞納特別擅長驚悚和災難題材，
+                    <br>能在恐怖電影中塑造出令人從頭寒到腳的恐怖感，
+                    <br>將緊張、溫情甚至恐怖的節奏拿捏到位。
+                    <br>災難片的敘事處理得很好，從洪波湧起、生靈塗炭到劫後餘生，
+                    <br>故事煽情催淚，動靜平分秋色，細節處理得非常精緻到位 。
+                </p>
+            </div>
         </div>
+        <h3 id="bottom_h3">INFORMATION</h3>
+        <hr id="bottom_hr">
+    </div>
+    <div class="clear"></div>
+    <div class="information">
+            <a href=""><img src="img/fb_icon-01.png" style="width: 60px;margin: 5px;" alt=""></a>
+            <a href=""><img src="img/youtube2_icon.png" style="width: 60px;margin: 5px;" alt=""></a>
+            <a href=""><img src="img/tt_icon-01.png" style="width: 60px;margin: 5px;" alt=""></a>
+            <br>
+            <a href=""><img src="img/wiki_icon-01.png" style="width: 60px;margin: 5px;" alt=""></a>
+            <a href=""><img src="img/IMDB_icon-01.png" style="width: 60px;margin: 5px;" alt=""></a>
+            <a href=""><img src="img/ig_icon-01.png" style="width: 60px;margin: 5px;" alt=""></a>
     </div>
     <footer>
         <div class="footer_logo"><img src="img/Jurassic_icon2.png" alt=""></div>
@@ -458,6 +579,7 @@
             <a href=""><img src="img/IMDB_icon-01.png" style="width: 40px" alt=""></a>
             <a href=""><img src="img/ig_icon-01.png" style="width: 40px" alt=""></a>
         </div>
+
         <div class="footer_R">
             <ul>
                 <li>Plot</li>
@@ -489,17 +611,18 @@
         </div>
     </footer>
     <script>
-    var btn = document.querySelector('.menu');
-    var menu_page = document.querySelector('.menu_page');
-    btn.onclick=function () {
-        if (menu_page.style.display==="none") {
-            menu_page.style.display="block";
-        } 
-        else {
-            menu_page.style.display="none";
+        var btn = document.querySelector('.menu');
+        var menu_page = document.querySelector('.menu_page');
+        btn.onclick = function () {
+            if (menu_page.style.display === "none") {
+                menu_page.style.display = "block";
+            }
+            else {
+                menu_page.style.display = "none";
+            }
         }
-    }
-    
+
     </script>
 </body>
+
 </html>
