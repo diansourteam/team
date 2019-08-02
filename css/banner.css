@@ -1,5 +1,5 @@
 *{
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
     box-sizing: border-box;
 }
 html body,h1{
@@ -239,4 +239,43 @@ hr{
             stroke-dashoffset: 0;
         }
     }
+    .mobile{
+        /* display: none; */
+        background-image: url(../img/mobile_banner.jpg);
+        width: 100%;
+        min-width: 360px;
+        height: 100vh;
+        background-position: center bottom;
+        background-size: cover;
+        padding-top: 100px;
+        display: none;
+    }
+    .mobile_title{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .mobile_title img{
+        width: 100%;
+    }
+    .mobile_btn_container{
+        width: 255px;
+        margin: 50px auto 0 auto;
+    }
+    .mobile_btn_container a{
+        display: inline;
+    }
+    .mobile_btn_container .color{
+        margin-top: 25px;
+    }
+
+    
+    @media(max-width:1200px){
+        .swiper-container{
+            display: none;
+        }
+        .mobile{
+            display: block;
+        }
+    }
+    
 
