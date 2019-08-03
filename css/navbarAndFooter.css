@@ -190,6 +190,9 @@ body {
         .menu .btn{
             animation: menu_btn 3s ease-in infinite;
         }
+        .left_decor{
+            display: none;
+        }
         @keyframes menu_btn{
             from{
                 stroke-dashoffset: 900;

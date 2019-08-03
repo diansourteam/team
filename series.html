@@ -16,7 +16,7 @@
     <style>
         .swiper-container {
             max-width: 1200px;
-            height: 100vh;
+
             padding: 100px 0 0 0;
         }
 
@@ -24,7 +24,6 @@
             background-position: center;
             background-size: cover;
             width: 30%;
-            max-height: 700px;
         }
 
         #pinContainer {
@@ -111,35 +110,38 @@
             position: relative;
         }
 
-        .swiper-slide::after {
-            content: attr(data-th)"";
-            position: absolute;
-            width: 100%;
-            text-align: center;
-            color: palegoldenrod;
-            padding: 20px 0px;
-            bottom: -30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .mobile_container{
+
+        .mobile_container {
             display: none;
         }
+
         @media(max-width:1400px) {
             .series {
                 display: none;
             }
-            .mobile_container{
+
+            .mobile_container {
                 display: block;
             }
-            #mobile_swiper01, #mobile_swiper02, #mobile_swiper03, #mobile_swiper04, #mobile_swiper05 {
-                width: 50% ;
+
+            #mobile_swiper01,
+            #mobile_swiper02,
+            #mobile_swiper03,
+            #mobile_swiper04,
+            #mobile_swiper05 {
+                width: 50%;
             }
 
         }
-        @media(max-width:700px){
-            #mobile_swiper01, #mobile_swiper02, #mobile_swiper03, #mobile_swiper04, #mobile_swiper05 {
-                width: 90% ;
+
+        @media(max-width:700px) {
+
+            #mobile_swiper01,
+            #mobile_swiper02,
+            #mobile_swiper03,
+            #mobile_swiper04,
+            #mobile_swiper05 {
+                width: 90%;
             }
         }
     </style>
@@ -445,6 +447,8 @@
                 </a>
             </div>
         </div>
+        <img class="left_decor" width="100px" style="position: absolute;top: 100px; left: 10px"
+            src="img/LeftDecor-04.png" alt="">
         <div class="black_item" style="color: rgb(255, 255, 255);text-align: center;">
             <a href="series.html" target="_self">電影系列介紹</a>
         </div>
@@ -453,11 +457,21 @@
         <header>
             <div class="swiper-container" id="filmSeries">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide swiper1" style="background-image:url(img/jurassic-park01.jpg)"></div>
-                    <div class="swiper-slide swiper2" style="background-image:url(img/jurassic-park02.jpg)"></div>
-                    <div class="swiper-slide swiper3" style="background-image:url(img/jurassic-park03.jpg)"></div>
-                    <div class="swiper-slide swiper4" style="background-image:url(img/jurassic_world01.jpg)"></div>
-                    <div class="swiper-slide swiper5" style="background-image:url(img/jurassic_world2.jpg)"></div>
+                    <div class="swiper-slide swiper1" id="mobile_swiper01">
+                        <img style="width: 100%;position: relative;" src="img/jurassic-park01.jpg" alt=""></img>
+                    </div>
+                    <div class="swiper-slide swiper1" id="mobile_swiper02">
+                        <img style="width: 100%;position: relative;" src="img/jurassic-park02.jpg" alt=""></img>
+                    </div>
+                    <div class="swiper-slide swiper1" id="mobile_swiper03">
+                        <img style="width: 100%;position: relative;" src="img/jurassic-park03.jpg" alt=""></img>
+                    </div>
+                    <div class="swiper-slide swiper1" id="mobile_swiper04">
+                        <img style="width: 100%;position: relative;" src="img/jurassic_world01.jpg" alt=""></img>
+                    </div>
+                    <div class="swiper-slide swiper1" id="mobile_swiper05">
+                        <img style="width: 100%;position: relative;" src="img/jurassic_world2.jpg" alt=""></img>
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -614,20 +628,42 @@
         <!-- Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div data-th="1993年，生物科研集團「國際遺傳公司」（InGen）進行恐龍化石開挖工作時，偶然發現一顆來自於上古時代、存有一隻蚊子的琥珀，從蚊子體內提煉出稀有的恐龍血液，由此獲得恐龍基因而成功「復活恐龍」。總裁約翰·哈蒙德為此創立開辦名為「侏羅紀公園」的主題樂園，邀請著名古生物學家亞倫·葛蘭與其助手愛麗·薩特勒、混沌理論專家伊恩·馬康姆、以及檢測公園安全問題的公司股東唐納·卓那羅前去參觀。直升機到達位於哥斯大黎加海域西南方的努布拉島，眾人剛到達就親眼目睹平原上一條腕龍和多數草食恐龍，對眼前的一切感到難以置信。" class="swiper-slide swiper1" id="mobile_swiper01"style="background-image:url(img/jurassic-park01.jpg)"></div>
-                <div data-th="侏羅紀公園2，是一部1997年的科幻冒險電影，本片為《侏羅紀公園》的續集，同樣根據麥可·克萊頓的原著小說改編並由史蒂芬·史匹柏執導。電影的主要場景在作為「侏羅紀公園」輔助地點的索納島上，該島上已經充斥野生的各種恐龍，前集主角伊恩·馬爾科姆率領一個探險隊去紀錄恐龍的生態，同時國際遺傳公司為了在聖地牙哥開設另一座「侏羅紀公園」，也派了一組人馬去捕捉恐龍。" class="swiper-slide swiper2" id="mobile_swiper02"style="background-image:url(img/jurassic-park02.jpg)"></div>
-                <div data-th="是一部於2001年上映的美國科幻冒險片，是《侏羅紀公園》系列的第三部作品，也是該系列中第一部既不是由史蒂芬·史匹柏導演，亦非根據麥可·克萊頓所著小說改編的電影，不過片中有部分場景來源於克萊頓的原著小說《侏羅紀公園》和《失落的世界》。影片主要情節的發生地位於前作《侏羅紀公園：失落的世界》中的索納島，一對離婚夫婦用計把亞倫·格蘭特博士騙來這個島上幫助他們找到自己的兒子。" class="swiper-slide swiper3" id="mobile_swiper03"style="background-image:url(img/jurassic-park03.jpg)"></div>
-                <div data-th="侏羅紀公園災難過去二十二年，努布拉島被重新改建成一座名為「侏羅紀世界」的恐龍主題樂園。樂園營運主管克萊兒·戴寧每日專注於接待幾萬名遊客以及處理樂園事務，將她的兩個前來樂園度週末的侄子格雷和查克·米契兄弟，託付給她的女助理莎拉照顧。克萊兒隨後去宣傳樂園的新賣點：一隻名叫「帝王暴龍」（Indominus Rex）的基因混合恐龍，牠是由七種恐龍（暴龍、迅猛龍、南方巨獸龍、食肉牛龍、瑪君龍、皺褶龍、鐮刀龍）及一些現代動物的基因混合培育而成，由遺傳學家亨利·吳博士帶領的科研團隊製造。" class="swiper-slide swiper4" id="mobile_swiper04"style="background-image:url(img/jurassic_world01.jpg)"></div>
-                <div data-th="本片加上前所未見，
-                更令人驚嘆和駭人的全新品種。
-                歡迎蒞臨【侏羅紀世界：殞落國度】。
-                本片除了【侏羅紀世界】原班人馬
-                克里斯普拉特、布萊絲達拉斯霍華、
-                黃榮亮、傑夫高布倫之外，
-                還加入新的演員包括詹姆斯克倫威爾、
-                泰德李凡、陶比瓊斯、瑞夫史波…等。
-                本部史詩動作冒險鉅片由【浩劫奇蹟】
-                胡恩安東尼奧巴亞納執導。" class="swiper-slide swiper5" id="mobile_swiper05"style="background-image:url(img/jurassic_world2.jpg) "></div>
+                <div class="swiper-slide swiper1" id="mobile_swiper01">
+                    <img style="width: 100%;position: relative;" src="img/jurassic-park01.jpg" alt=""></img>
+                    <h2 style="width: 100%;text-align:center;color:white;">侏儸紀公園I</h2>
+                    <p style="width: 100%;text-align:center;color:white;">
+                        1993年，生物科研集團「國際遺傳公司」（InGen）進行恐龍化石開挖工作時，偶然發現一顆來自於上古時代、存有一隻蚊子的琥珀，從蚊子體內提煉出稀有的恐龍血液，由此獲得恐龍基因而成功「復活恐龍」。總裁約翰·哈蒙德為此創立開辦名為「侏羅紀公園」的主題樂園，邀請著名古生物學家亞倫·葛蘭與其助手愛麗·薩特勒、混沌理論專家伊恩·馬康姆、以及檢測公園安全問題的公司股東唐納·卓那羅前去參觀。直升機到達位於哥斯大黎加海域西南方的努布拉島，眾人剛到達就親眼目睹平原上一條腕龍和多數草食恐龍，對眼前的一切感到難以置信。
+                    </p>
+                </div>
+                <div class="swiper-slide swiper1" id="mobile_swiper02">
+                    <img style="width: 100%;position: relative;" src="img/jurassic-park02.jpg" alt=""></img>
+                    <h2 style="width: 100%;text-align:center;color:white;">侏儸紀公園II</h2>
+                    <p style="width: 100%;text-align:center;color:white;">
+                        「國際遺傳公司」（InGen）因為四年前侏羅紀公園災難而瀕臨破產，約翰·哈蒙德被迫退出總裁位置，由他的野心侄子彼得·魯德洛接替。從公園死裡逃生的數學家伊恩·馬康姆，一天被哈蒙德請去瞭解到之前的努布拉島只是為遊客準備的樂園區，真正的恐龍養殖區是位於主島西南方向的「依沙拉·索納島」（Isla Sorna），稱為「B區」（Site B）；島上設備因幾年前發生風暴而棄置。哈蒙德解釋不久前曾經有一個英國富有家庭私闖島上，一位小女孩遭島上恐龍誤傷而導致公司受他們控告，因此打算趕在魯德洛插手事務之前搜集到足夠證據，向大眾證明島上的恐龍正在平安生活。伊恩得知他的古生物學家女友莎拉·哈汀已經抵達島上收集資料，基於之前經歷的影響而只想將她平安帶回來，伊恩便立即召集隊伍，隨行的人包括他的小女兒凱莉。
+                    </p>
+                </div>
+                <div class="swiper-slide swiper1" id="mobile_swiper03">
+                    <img style="width: 100%;position: relative;" src="img/jurassic-park03.jpg" alt=""></img>
+                    <h2 style="width: 100%;text-align:center;color:white;">侏儸紀公園III</h2>
+                    <p style="width: 100%;text-align:center;color:white;">
+                        一個叫艾里克·科比的男孩和一位叫班·希爾德布蘭德的成年人在索納島玩帆傘運動時發生了事故，船上的人都消失了，然後船隻撞到海上礁石上，班切斷了繩索，兩人飄到島上的樹林中後與外界失去了聯繫。在努布拉島上成功生還的亞倫·格蘭特博士已經因其發現和經歷變成世界著名的人物，同樣死裡逃生的艾麗·賽特勒博士與一位叫馬克的律師成婚並有了個兒子查理，後者稱亞倫是「恐龍叔叔」。亞倫的助手比利相信迅猛龍比兩人所想像的還要聰明，他成功地複製出迅猛龍的共鳴腔，可以用來發出它的聲音。
+                    </p>
+                </div>
+                <div class="swiper-slide swiper1" id="mobile_swiper04">
+                    <img style="width: 100%;position: relative;" src="img/jurassic_world01.jpg" alt=""></img>
+                    <h2 style="width: 100%;text-align:center;color:white;">侏儸紀世界I</h2>
+                    <p style="width: 100%;text-align:center;color:white;">
+                        侏羅紀公園災難過去二十二年，努布拉島被重新改建成一座名為「侏羅紀世界」的恐龍主題樂園。樂園營運主管克萊兒·戴寧每日專注於接待幾萬名遊客以及處理樂園事務，將她的兩個前來樂園度週末的侄子格雷和查克·米契兄弟，託付給她的女助理莎拉照顧。克萊兒隨後去宣傳樂園的新賣點：一隻名叫「帝王暴龍」（Indominus Rex）的基因混合恐龍，牠是由七種恐龍（暴龍、迅猛龍、南方巨獸龍、食肉牛龍、瑪君龍、皺褶龍、鐮刀龍）及一些現代動物的基因混合培育而成，由遺傳學家亨利·吳博士帶領的科研團隊製造。
+                    </p>
+                </div>
+                <div class="swiper-slide swiper1" id="mobile_swiper05">
+                    <img style="width: 100%;position: relative;" src="img/jurassic_world2.jpg" alt=""></img>
+                    <h2 style="width: 100%;text-align:center;color:white;">侏儸紀世界II</h2>
+                    <p style="width: 100%;text-align:center;color:white;">
+                        侏羅紀世界樂園失事過後，一夥僱傭兵來到棄置的努布拉島上，從潟湖中打撈出死於水下的帝王暴龍的一塊骨骼樣本以獲得其DNA。過程中，隊伍受暴龍和湖中滄龍的襲擊，撤退前還是成功獲取樣本。三年後，島上火山即將爆發，使島上自由生存的恐龍再次面臨滅絕危機，美國參議院舉行聽證會來決定是否要拯救島上恐龍，而伊恩·馬康姆認為要讓恐龍跟著島嶼一起毀滅，由此來糾正約翰·哈蒙德當初復活恐龍的過錯。前樂園營運主管克萊兒·戴寧成立「恐龍保護團體」以拯救島上的恐龍，當參議院宣布將不會做出行動後，克萊兒受到哈蒙德生前搭檔班傑明·洛克伍德的傳喚，來到位於北加州的洛克伍德莊園。洛克伍德的助手伊萊·米爾斯介紹他有意將所有恐龍移送至一座全新島嶼繼續生存，但急需克萊兒一起上島來幫忙登錄所有恐龍體內的追蹤系統。
+                    </p>
+                </div>
+
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -653,27 +689,31 @@
 
         <div class="footer_R">
             <ul>
-                <li><a href="plot.html" target="_self"style="font-size:24px; color: white;">Plot</a> </li>
+                <li><a href="plot.html" target="_self" style="font-size:24px; color: white;">Plot</a> </li>
                 <br>
-                <li><a href="plot.html#synopsis" target="_self"style="font-size:20px; color: white;">synopsis</a></li>
-                <li><a href="plot.html#video" target="_self"style="font-size:20px; color: white;">vedio</a></li>
+                <li><a href="plot.html#synopsis" target="_self" style="font-size:20px; color: white;">synopsis</a></li>
+                <li><a href="plot.html#video" target="_self" style="font-size:20px; color: white;">vedio</a></li>
             </ul>
             <ul>
-                <li><a href="character.html" target="_self"style="font-size:24px; color: white;">Character</a></li>
+                <li><a href="character.html" target="_self" style="font-size:24px; color: white;">Character</a></li>
                 <br>
-                <li><a href="character.html#actor" target="_self"style="font-size:20px; color: white;">actor</a></li>
-                <li><a href="character.html#dinosaur" target="_self"style="font-size:20px; color: white;">dinosaur</a></li>
+                <li><a href="character.html#actor" target="_self" style="font-size:20px; color: white;">actor</a></li>
+                <li><a href="character.html#dinosaur" target="_self" style="font-size:20px; color: white;">dinosaur</a>
+                </li>
             </ul>
             <ul>
-                <li><a href="series.html" target="_self"style="font-size:24px; color: white;">Series</a></li>
+                <li><a href="series.html" target="_self" style="font-size:24px; color: white;">Series</a></li>
                 <br>
-                <li><a href="series.html#filmSeries" target="_self"style="font-size:20px; color: white;">Film series</a></li>
+                <li><a href="series.html#filmSeries" target="_self" style="font-size:20px; color: white;">Film
+                        series</a></li>
             </ul>
             <ul>
-                <li><a href="information.html" target="_self"style="font-size:24px; color: white;">Information</a></li>
+                <li><a href="information.html" target="_self" style="font-size:24px; color: white;">Information</a></li>
                 <br>
-                <li><a href="information.html#merchandies" target="_self"style="font-size:20px; color: white;">Merchandies</a></li>
-                <li><a href="information.html#director" target="_self"style="font-size:20px; color: white;">Director</a></li>
+                <li><a href="information.html#merchandies" target="_self"
+                        style="font-size:20px; color: white;">Merchandies</a></li>
+                <li><a href="information.html#director" target="_self"
+                        style="font-size:20px; color: white;">Director</a></li>
             </ul>
         </div>
         <div class="footer_B">
