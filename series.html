@@ -17,13 +17,13 @@
         .swiper-container {
             max-width: 1200px;
             height: 100vh;
-            padding-bottom: 50px;
+            padding: 100px 0 0 0;
         }
 
         .swiper-slide {
             background-position: center;
             background-size: cover;
-            max-width: 30%;
+            width: 30%;
             max-height: 700px;
         }
 
@@ -33,6 +33,7 @@
             margin: 0 auto;
             display: block;
             overflow: hidden;
+            padding-bottom: 1000px;
         }
 
         .panel {
@@ -105,17 +106,6 @@
         }
 
 
-        @media(max-width: 1200px) {
-
-            .series {
-                height: 100vh;
-            }
-
-            #pinContainer {
-                display: none;
-            }
-
-        }
 
         .swiper1 {
             position: relative;
@@ -131,6 +121,26 @@
             top: 70%;
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+        .mobile_container{
+            display: none;
+        }
+        @media(max-width:1400px) {
+            .series {
+                display: none;
+            }
+            .mobile_container{
+                display: block;
+            }
+            #mobile_swiper01, #mobile_swiper02, #mobile_swiper03, #mobile_swiper04, #mobile_swiper05 {
+                width: 50% ;
+            }
+
+        }
+        @media(max-width:700px){
+            #mobile_swiper01, #mobile_swiper02, #mobile_swiper03, #mobile_swiper04, #mobile_swiper05 {
+                width: 90% ;
+            }
         }
     </style>
 
@@ -601,6 +611,25 @@
             </section>
         </div>
     </div>
+    <!-- mobile版在這裡 -->
+    <div class="mobile_container">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper1" id="mobile_swiper01"style="background-image:url(img/jurassic-park01.jpg)"></div>
+                <div class="swiper-slide swiper2" id="mobile_swiper02"style="background-image:url(img/jurassic-park02.jpg)"></div>
+                <div class="swiper-slide swiper3" id="mobile_swiper03"style="background-image:url(img/jurassic-park03.jpg)"></div>
+                <div class="swiper-slide swiper4" id="mobile_swiper04"style="background-image:url(img/jurassic_world01.jpg)"></div>
+                <div class="swiper-slide swiper5" id="mobile_swiper05"style="background-image:url(img/jurassic_world2.jpg) "></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
     <footer>
         <div class="footer_logo"><img src="img/Jurassic_icon2.png" alt=""></div>
         <div class="footer_mid">
