@@ -107,18 +107,18 @@
 
 
 
-        .swiper1 {
+        .swiper-wrapper {
             position: relative;
         }
 
-        .swiper1::after {
-            content: "123132123";
+        .swiper-slide::after {
+            content: attr(data-th)"";
             position: absolute;
             width: 100%;
             text-align: center;
             color: palegoldenrod;
             padding: 20px 0px;
-            top: 70%;
+            bottom: -30%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
@@ -446,9 +446,7 @@
             </div>
         </div>
         <div class="black_item" style="color: rgb(255, 255, 255);text-align: center;">
-            周邊商品
-            <hr>
-            導演敘事
+            <a href="series.html" target="_self">電影系列介紹</a>
         </div>
     </nav>
     <div class="series">
@@ -616,11 +614,20 @@
         <!-- Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide swiper1" id="mobile_swiper01"style="background-image:url(img/jurassic-park01.jpg)"></div>
-                <div class="swiper-slide swiper2" id="mobile_swiper02"style="background-image:url(img/jurassic-park02.jpg)"></div>
-                <div class="swiper-slide swiper3" id="mobile_swiper03"style="background-image:url(img/jurassic-park03.jpg)"></div>
-                <div class="swiper-slide swiper4" id="mobile_swiper04"style="background-image:url(img/jurassic_world01.jpg)"></div>
-                <div class="swiper-slide swiper5" id="mobile_swiper05"style="background-image:url(img/jurassic_world2.jpg) "></div>
+                <div data-th="1993年，生物科研集團「國際遺傳公司」（InGen）進行恐龍化石開挖工作時，偶然發現一顆來自於上古時代、存有一隻蚊子的琥珀，從蚊子體內提煉出稀有的恐龍血液，由此獲得恐龍基因而成功「復活恐龍」。總裁約翰·哈蒙德為此創立開辦名為「侏羅紀公園」的主題樂園，邀請著名古生物學家亞倫·葛蘭與其助手愛麗·薩特勒、混沌理論專家伊恩·馬康姆、以及檢測公園安全問題的公司股東唐納·卓那羅前去參觀。直升機到達位於哥斯大黎加海域西南方的努布拉島，眾人剛到達就親眼目睹平原上一條腕龍和多數草食恐龍，對眼前的一切感到難以置信。" class="swiper-slide swiper1" id="mobile_swiper01"style="background-image:url(img/jurassic-park01.jpg)"></div>
+                <div data-th="侏羅紀公園2，是一部1997年的科幻冒險電影，本片為《侏羅紀公園》的續集，同樣根據麥可·克萊頓的原著小說改編並由史蒂芬·史匹柏執導。電影的主要場景在作為「侏羅紀公園」輔助地點的索納島上，該島上已經充斥野生的各種恐龍，前集主角伊恩·馬爾科姆率領一個探險隊去紀錄恐龍的生態，同時國際遺傳公司為了在聖地牙哥開設另一座「侏羅紀公園」，也派了一組人馬去捕捉恐龍。" class="swiper-slide swiper2" id="mobile_swiper02"style="background-image:url(img/jurassic-park02.jpg)"></div>
+                <div data-th="是一部於2001年上映的美國科幻冒險片，是《侏羅紀公園》系列的第三部作品，也是該系列中第一部既不是由史蒂芬·史匹柏導演，亦非根據麥可·克萊頓所著小說改編的電影，不過片中有部分場景來源於克萊頓的原著小說《侏羅紀公園》和《失落的世界》。影片主要情節的發生地位於前作《侏羅紀公園：失落的世界》中的索納島，一對離婚夫婦用計把亞倫·格蘭特博士騙來這個島上幫助他們找到自己的兒子。" class="swiper-slide swiper3" id="mobile_swiper03"style="background-image:url(img/jurassic-park03.jpg)"></div>
+                <div data-th="侏羅紀公園災難過去二十二年，努布拉島被重新改建成一座名為「侏羅紀世界」的恐龍主題樂園。樂園營運主管克萊兒·戴寧每日專注於接待幾萬名遊客以及處理樂園事務，將她的兩個前來樂園度週末的侄子格雷和查克·米契兄弟，託付給她的女助理莎拉照顧。克萊兒隨後去宣傳樂園的新賣點：一隻名叫「帝王暴龍」（Indominus Rex）的基因混合恐龍，牠是由七種恐龍（暴龍、迅猛龍、南方巨獸龍、食肉牛龍、瑪君龍、皺褶龍、鐮刀龍）及一些現代動物的基因混合培育而成，由遺傳學家亨利·吳博士帶領的科研團隊製造。" class="swiper-slide swiper4" id="mobile_swiper04"style="background-image:url(img/jurassic_world01.jpg)"></div>
+                <div data-th="本片加上前所未見，
+                更令人驚嘆和駭人的全新品種。
+                歡迎蒞臨【侏羅紀世界：殞落國度】。
+                本片除了【侏羅紀世界】原班人馬
+                克里斯普拉特、布萊絲達拉斯霍華、
+                黃榮亮、傑夫高布倫之外，
+                還加入新的演員包括詹姆斯克倫威爾、
+                泰德李凡、陶比瓊斯、瑞夫史波…等。
+                本部史詩動作冒險鉅片由【浩劫奇蹟】
+                胡恩安東尼奧巴亞納執導。" class="swiper-slide swiper5" id="mobile_swiper05"style="background-image:url(img/jurassic_world2.jpg) "></div>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -643,29 +650,30 @@
             <a href=""><img src="img/IMDB_icon-01.png" style="width: 40px" alt=""></a>
             <a href=""><img src="img/ig_icon-01.png" style="width: 40px" alt=""></a>
         </div>
+
         <div class="footer_R">
             <ul>
-                <li>Plot</li>
+                <li><a href="plot.html" target="_self"style="font-size:24px; color: white;">Plot</a> </li>
                 <br>
-                <li>synopsis</li>
-                <li>vedio</li>
+                <li><a href="plot.html#synopsis" target="_self"style="font-size:20px; color: white;">synopsis</a></li>
+                <li><a href="plot.html#video" target="_self"style="font-size:20px; color: white;">vedio</a></li>
             </ul>
             <ul>
-                <li>Character</li>
+                <li><a href="character.html" target="_self"style="font-size:24px; color: white;">Character</a></li>
                 <br>
-                <li>actor</li>
-                <li>dinosaur</li>
+                <li><a href="character.html#actor" target="_self"style="font-size:20px; color: white;">actor</a></li>
+                <li><a href="character.html#dinosaur" target="_self"style="font-size:20px; color: white;">dinosaur</a></li>
             </ul>
             <ul>
-                <li>Series</li>
+                <li><a href="series.html" target="_self"style="font-size:24px; color: white;">Series</a></li>
                 <br>
-                <li>Film series</li>
+                <li><a href="series.html#filmSeries" target="_self"style="font-size:20px; color: white;">Film series</a></li>
             </ul>
             <ul>
-                <li>Information</li>
+                <li><a href="information.html" target="_self"style="font-size:24px; color: white;">Information</a></li>
                 <br>
-                <li>Merchandise</li>
-                <li>Director</li>
+                <li><a href="information.html#merchandies" target="_self"style="font-size:20px; color: white;">Merchandies</a></li>
+                <li><a href="information.html#director" target="_self"style="font-size:20px; color: white;">Director</a></li>
             </ul>
         </div>
         <div class="footer_B">
