@@ -224,40 +224,44 @@
                 display: block;
             }
 
-
-
-
             .swiper2 .swiper-slide {
-            color: white;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            padding: 10% 10%;
-            opacity: 1;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            justify-content: center;
-            overflow: hidden;
-            align-items: center;
+                color: white;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                opacity: 1;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                justify-content: center;
+                overflow: hidden;
+                align-items: center;
             }
             
             .swiper2 .swiper-slide img{
                 position: absolute;
             }
 
+            /* 人名 */
             .swiper2 .swiper-slide .title {
                 position: absolute;
-            max-width: 400px;
-            line-height: 1.3;
+                max-width: 400px;
+                line-height: 1.3;
+                bottom: 20%;
             }
 
+            /* 介紹 */
             .swiper2 .swiper-slide .text {
             position: absolute;
             max-width: 400px;
             line-height: 1.3;
+            bottom: 10%;
             }
 
+            .swiper2 .swiper-slide .text2 {
+            bottom: 5%;
+            }
+            
 
             /* 恐龍部分 */
             .swiper-container {
@@ -780,7 +784,7 @@
           <div class="swiper-slide">
             <img style="width:100%;" src="img/04Justice Smith.jpg" alt="">
             <div class="title" data-swiper-parallax="-300" style="font-size: 30px">Franklin</div>
-            <div class="text" data-swiper-parallax="-100">
+            <div class="text text2" data-swiper-parallax="-100">
               <p>Justice Smith飾
                 侏羅紀世界的前技術員
                 神經質，如今加入恐龍保護團體，
