@@ -16,8 +16,8 @@
     <style>
         .swiper-container {
             max-width: 1200px;
-
-            padding: 100px 0 0 0;
+            padding: 100px 100px 0 100px;
+            margin-bottom: 100px;
         }
 
         .swiper-slide {
@@ -460,29 +460,31 @@
         <header>
             <div class="swiper-container" id="filmSeries">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide swiper1" id="mobile_swiper01">
+                    <div class="swiper-slide swiper1 story-1" id="mobile_swiper01">
                         <img style="width: 100%;position: relative;" src="img/jurassic-park01.jpg" alt=""></img>
                     </div>
-                    <div class="swiper-slide swiper1" id="mobile_swiper02">
+                    <div class="swiper-slide swiper1 story-2" id="mobile_swiper02">
                         <img style="width: 100%;position: relative;" src="img/jurassic-park02.jpg" alt=""></img>
                     </div>
-                    <div class="swiper-slide swiper1" id="mobile_swiper03">
+                    <div class="swiper-slide swiper1 story-3" id="mobile_swiper03">
                         <img style="width: 100%;position: relative;" src="img/jurassic-park03.jpg" alt=""></img>
                     </div>
-                    <div class="swiper-slide swiper1" id="mobile_swiper04">
+                    <div class="swiper-slide swiper1 story-4" id="mobile_swiper04">
                         <img style="width: 100%;position: relative;" src="img/jurassic_world01.jpg" alt=""></img>
                     </div>
-                    <div class="swiper-slide swiper1" id="mobile_swiper05">
+                    <div class="swiper-slide swiper1 story-5" id="mobile_swiper05">
                         <img style="width: 100%;position: relative;" src="img/jurassic_world2.jpg" alt=""></img>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </header>
         <div id="pinContainer">
-            <section class="panel jurassic1">
+            <section class="panel jurassic1" data-storyid="1">
                 <h1>侏羅紀公園</h1>
-                <div class="jurassicL">
+                <div class="jurassicL" >
                     <div class="img-tit">
                         <img src="img/jurassic-park01.jpg" alt="">
                     </div>
@@ -514,7 +516,7 @@
                 </div>
             </section>
 
-            <section class="panel jurassic2">
+            <section class="panel jurassic2" data-storyid="2">
                 <h1>侏羅紀公園_失落的世界</h1>
                 <div class="jurassicL">
                     <div class="img-tit">
@@ -541,7 +543,7 @@
                     </div>
             </section>
 
-            <section class="panel jurassic3">
+            <section class="panel jurassic3" data-storyid="3">
                 <h1>侏羅紀公園3</h1>
                 <div class="jurassicL">
                     <div class="img-tit">
@@ -568,7 +570,7 @@
                     </div>
             </section>
 
-            <section class="panel jurassic4">
+            <section class="panel jurassic4" data-storyid="4">
                 <h1>侏羅紀世界</h1>
                 <div class="jurassicL">
                     <div class="img-tit">
@@ -595,7 +597,7 @@
                     </div>
             </section>
 
-            <section class="panel jurassic5">
+            <section class="panel jurassic5" data-storyid="5">
                 <h1>侏羅紀世界:殞落國度</h1>
                 <div class="jurassicL">
                     <div class="img-tit">
@@ -604,7 +606,6 @@
                 </div>
                 <div class="jurassicR">
                     <div class="sen-text">
-
                         <p class="p-style">本片加上前所未見，更令人驚嘆和駭人的全新品種。<br>
                             歡迎蒞臨【侏羅紀世界：殞落國度】。<br>
                             本片除了【侏羅紀世界】原班人馬克里斯普拉特、布萊絲達拉斯霍華、<br>
@@ -749,10 +750,48 @@
             pagination: {
                 el: '.swiper-pagination',
             },
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
         });
     </script>
 
+    <!-- 點擊事件.移動到選取的介紹頁 -->
+    
+    <script>
+    $(".story-1").click(function() {
+    $('html, body').animate({
+        scrollTop: (1000)
+    }, 2000);
+    });
 
+
+    $(".story-2").click(function() {
+    $('html, body').animate({
+        scrollTop: (2000)
+    }, 2000);
+    });
+
+    $(".story-3").click(function() {
+    $('html, body').animate({
+        scrollTop: (3500)
+    }, 3000);
+    });
+
+    $(".story-4").click(function() {
+    $('html, body').animate({
+        scrollTop: (5000)
+    }, 4000);
+    });
+
+    $(".story-5").click(function() {
+    $('html, body').animate({
+        scrollTop: (5800)
+    }, 5000);
+    });
+
+    </script>
 
 
     <script>
