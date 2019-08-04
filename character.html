@@ -81,9 +81,10 @@
         #actor{
             display: block;
         }
-        .swiper2 {
+
+        .swiper2 ,.swiper-slide p,.swiper-slide h1{
             display: none;
-            }
+        }
 
         /* 恐龍-START */
         .dinosaur-all {
@@ -218,7 +219,7 @@
             #actor ,.section-all{
                 display: none;
             }
-            .swiper2{
+            .swiper2 , .swiper-slide p,.swiper-slide h1{
                 display: block;
             }
 
@@ -262,24 +263,40 @@
             
 
             /* 恐龍部分 */
+
+            .swiper1 .swiper-slide p{
+                width: 50%;
+                position: absolute;
+                top: 20%;
+            }
+            
+            .swiper1 .swiper-slide h1{
+                position: absolute;
+                top: 10%;
+            }
+
             .swiper-container {
                 width: 100%;
-                height: 100vh;
-                margin: 0 auto;
+                height: 70vh;
+                margin: 50px auto;
                 padding: 0 15%;
             }
 
-            .swiper-slide {
+            .swiper1 .swiper-slide {
+                margin: 0 auto;
+                color: #fff;
+                width: 70%;
                 text-align: center;
-                font-size: 18px;
-                display: flex;
                 justify-content: center;
                 overflow: hidden;
                 align-items: center;
-                opacity: 0.1;
+                opacity: 1;
+                background-color: rgb(0, 0, 0, 0.2);
+                border-radius: 40px;
             }
 
-            .swiper-slide img {
+            .swiper1 .swiper-slide img {
+                margin-top: 300px;
                 max-width: 50%;
                 max-height: 50%;
                 overflow: hidden;
@@ -896,30 +913,91 @@
         <div class="swiper-dinosaur">
             <div class="swiper-container swiper1">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide now_useing" data-dinosaurid="1"><img data-dinosaurid="1"
-                            src="img/dinosaur-01.png" alt=""></div>
+                    <div class="swiper-slide now_useing" data-dinosaurid="1">
+                        <img data-dinosaurid="1" src="img/dinosaur-01.png" alt="">
+                        <h1>蒼龍</h1>
+                        <P>尺寸:高3米 / 長17米<br>
+                        飲食:肉食動物<br>
+                        這種史前深海裡的頂級掠食者什麼海洋生物都吃。牠有雙鉸式的上下顎，可以將嘴巴張得老大，連蛇頸龍和大白鯊都能一口吞進。牠們其實並不算是恐龍，而是海生爬行動物。</P>
+                        </div>
                     <div class="swiper-slide" data-dinosaurid="2"><img data-dinosaurid="2" src="img/dinosaur-02.png"
-                            alt=""></div>
+                            alt="">
+                            <h1>無齒翼龍</h1>
+                            <p>尺寸:高2.9米 / 長5.5米<br>
+                            飲食:肉食動物<br>
+                            無齒翼龍是侏羅紀世界園區內體型最龐大的翼龍，希臘文的意思是「有翼的蜥蜴」。牠的翼展比任何鳥類都長，牠主要以魚類為食，但是牠也極具攻擊性。</p>
+                        </div>
                     <div class="swiper-slide" data-dinosaurid="3"><img data-dinosaurid="3" src="img/dinosaur-03.png"
-                            alt="3"></div>
+                            alt="3">
+                            <h1>似鱷龍</h1>
+                            <p>尺寸:高3.6米 / 長11米<br>
+                            飲食:肉食動物<br>
+                            似鱷龍的背部有一個60公分高的帆狀物，牠也有一張很長的嘴巴（1.2米），以及30公分長的利爪，非常擅於獵捕魚類</p>
+                        </div>
                     <div class="swiper-slide" data-dinosaurid="4"><img data-dinosaurid="4" src="img/dinosaur-04.png"
-                            alt=""></div>
+                            alt="">
+                            <h1>暴龍</h1>
+                            <p>尺寸:高5-6米 / 長12米<br>
+                            飲食:肉食動物<br>
+                            科學家相信這隻兇猛的掠食性動物一口可以吞下230公斤的肉。暴龍的獵物的化石，包括三角龍和艾德蒙頓龍，顯示暴龍在吞食獵物時會咬碎牠們的骨頭，暴龍的糞便中也找到破碎的骨頭。</p>
+                        </div>
                     <div class="swiper-slide" data-dinosaurid="5"><img data-dinosaurid="5" src="img/dinosaur-05.png"
-                            alt=""></div>
+                            alt="">
+                            <h1>三角龍</h1>
+                            <p>尺寸:高3米 / 長8米<br>
+                            飲食:草食動物<br>
+                            三角龍最顯著的特徵是牠巨大的頭顱，大約有1.2 到1.5米寬，上面有多根角，頭顱後方則有一塊頭盾。牠們會運用口鼻部上方的鼻角和眼睛上方的一對額角抵禦像是暴龍的掠食者，也會用來進行求偶儀式。</p>
+                        </div>
                     <div class="swiper-slide" data-dinosaurid="6"><img data-dinosaurid="6" src="img/dinosaur-06.png"
-                            alt=""></div>
+                            alt="">
+                            <h1>艾德蒙頓龍</h1>
+                            <p>尺寸:高3米 / 長12-13米<br>
+                            飲食:草食動物<br>
+                            艾德蒙頓龍是扁頭鴨嘴的恐龍，也是深受暴龍威脅的獵物。牠們喜歡成群結隊在針葉林和其他植被上覓食。</p>
+                        </div>
                     <div class="swiper-slide" data-dinosaurid="7"><img data-dinosaurid="7" src="img/dinosaur-07.png"
-                            alt=""></div>
+                            alt="">
+                            <h1>迅猛龍</h1>
+                            <p>尺寸:高1.7米 / 長4.5米<br>
+                            飲食:肉食動物<br>
+                            迅猛龍大概是最聰明的恐龍之一，因為牠具有相當大的大腦，牠是地表最強的掠食動物之一，就像牠的名字一樣，能夠迅速地移動。當牠站起來狂奔，時速可高達39公里。</p>
+                        </div>
                     <div class="swiper-slide" data-dinosaurid="8"><img data-dinosaurid="8" src="img/dinosaur-08.png"
-                            alt=""></div>
+                            alt="">
+                            <h1>帝王暴龍</h1>
+                            <p>尺寸:高12米 / 長15米<br>
+                            飲食:肉食動物<br>
+                            帝王暴龍乍看之下和暴龍非常類似，但是牠擁有獨特的頭飾以及強韌的骨質皮層，可以追溯到阿貝力龍類。帝王暴龍的吼聲大約有140-160分貝，就跟一架747噴射客機起飛一樣大聲。就算牠被關在圍欄內，奔跑的速度仍然可達到將近時速50公里。
+                            </p>
+                        </div>
                     <div class="swiper-slide" data-dinosaurid="9"><img data-dinosaurid="9" src="img/dinosaur-09.png"
-                            alt=""></div>
+                            alt="">
+                            <h1>劍龍</h1>
+                            <p>尺寸:高2.7米 / 長8.5米<br>
+                            飲食:草食動物<br>
+                            劍龍脊椎上有17塊骨板，還有長著尖刺的有力尾巴，看起來很可怕，但主要作用還是防禦。劍龍前腳比後腳短，以方便吃到植物。</p>
+                        </div>
                     <div class="swiper-slide" data-dinosaurid="10"><img data-dinosaurid="10" src="img/dinosaur-10.png"
-                            alt=""></div>
+                            alt="">
+                            <h1>似雞籠</h1>
+                            <p>尺寸:高1.9米 / 長4-6米<br>
+                            飲食:雜食動物<br>
+                            這種跑得快的恐龍頭很大，嘴裡沒有牙齒。雖然名字叫做「雞模仿者」，但牠們比較像恐龍鴕鳥，奔跑的速度可以和印度豹一樣快！似雞龍喜歡群聚，你可以在似雞龍骨看見牠們。</p>
+                        </div>
                     <div class="swiper-slide" data-dinosaurid="11"><img data-dinosaurid="11" src="img/dinosaur-11.png"
-                            alt=""></div>
+                            alt="">
+                            <h1>冥河龍</h1>
+                            <p>尺寸:高5.3米 / 長4.9米<br>
+                            飲食:草食動物<br>
+                            要比誰的頭最硬就不得不提厚頭龍了！厚頭龍的極厚頭顱一眼就可辨別，厚度可達25公分。雖然牠們的口鼻和頭顱都長有小瘤，但別擔心，牠們只吃水果和種子。</p>
+                        </div>
                     <div class="swiper-slide" data-dinosaurid="12"><img data-dinosaurid="12" src="img/dinosaur-12.png"
-                            alt=""></div>
+                            alt="">
+                            <h1>腕龍</h1>
+                            <p>尺寸:高4.5米 / 長23-27米<br>
+                        飲食:草食動物<br>
+                            迷惑龍的體型非常龐大，牠具有鑿子般的牙齒，可以很快地從樹枝上把樹葉咬下來，但是牠不會</p>
+                        </div>
                 </div>
             </div>
         </div>
@@ -1016,7 +1094,6 @@
                 <p>尺寸:高1.7米 / 長4.5米</p>
                 <p>飲食:肉食動物</p>
                 <p>迅猛龍大概是最聰明的恐龍之一，因為牠具有相當大的大腦，牠是地表最強的掠食動物之一，就像牠的名字一樣，能夠迅速地移動。當牠站起來狂奔，時速可高達39公里。</p>
-
             </div>
 
             <div class="section-bg" data-dinosaurid="8">
