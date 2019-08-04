@@ -142,12 +142,6 @@
             background-size: cover;
         }
 
-        .section-all.width1200 {
-            display: none;
-        }
-
-
-
         /* 背景，這邊不採用 */
 
         .section-bg {
@@ -217,7 +211,7 @@
 
         @media(max-width: 1200px) {
 
-            #actor{
+            #actor ,.section-all{
                 display: none;
             }
             .swiper2{
@@ -286,10 +280,6 @@
                 max-height: 50%;
                 overflow: hidden;
             }
-
-
-
-
         }
     </style>
 </head>
@@ -743,7 +733,6 @@
     <!-- murri end -->
 
     <div class="swiper-container swiper2" >
-
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img style="width:100%;" src="img/01ChrisPratt.jpg" alt="">
@@ -1210,19 +1199,6 @@
             preloadImages: true,
             updateOnImagesReady: true,
         });
-
-        // 根據螢幕大小調整其他內容.另外因為JS判斷跟CSS判斷有誤差，所以用CLASS控制
-        $(window).resize(function () {
-            if ($(window).width() <= 1200) {
-                $(".section-all").addClass("width1200")
-            }
-            else {
-                $(".section-all").removeClass("width1200")
-            }
-        })
-
-
-
 
     </script>
 
