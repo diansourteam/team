@@ -107,10 +107,9 @@
         }
 
         .swiper-container {
-            width: 300px;
+            width: 400px;
             height: 100vh;
-            margin-left: auto;
-            margin-right: auto;
+            padding-right: 100px;
         }
 
         .swiper-slide {
@@ -163,17 +162,17 @@
             object-fit: cover;
         } */
 
-        .section-img {
-            width: 33%;
+        .section-img{
+            width: 80%;
             position: absolute;
             z-index: 10;
             left: -300%;
-            bottom: 10%
+            bottom: 10%;
+            z-index: 3;
         }
 
         .section-img img {
-            width: 70%;
-            height: 70%;
+            max-width: 50%;
         }
 
         .sectionR {
@@ -190,9 +189,13 @@
         }
 
         .sectionR h1 {
-            background-color: rgb(0, 0, 0, 1);
+            background-color: rgb(0, 0, 0, 0.5);
             line-height: 60px;
             text-align: center;
+        }
+
+        .sectionR p{
+            margin: 0 20px;
         }
 
         .sectionR.now_useing {
@@ -203,8 +206,9 @@
             left: 0%;
         }
 
-        .section-img.now_useing {
-            left: 10%;
+        .section-img.now_useing{
+            position: absolute;
+            left: 20%;
         }
 
 
@@ -925,7 +929,7 @@
             <div class="section-bg now_useing" data-dinosaurid="1">
                 <img src="img/dinosaur-bg-01.jpg" alt="">
             </div>
-            <div class="section-img now_useing" data-dinosaurid="1">
+            <div class="section-img now_useing" data-dinosaurid="1" style="top: -15%; right: 10%;">
                 <img src="img/dinosaur-01.png" alt="">
             </div>
             <div class="sectionR now_useing" data-dinosaurid="1">
@@ -952,7 +956,7 @@
             <div class="section-bg" data-dinosaurid="3">
                 <img data-dinosaurid="3" src="img/dinosaur-bg-03.jpg" alt="">
             </div>
-            <div class="section-img" data-dinosaurid="3">
+            <div class="section-img" data-dinosaurid="3" style="width: 60%">
                 <img src="img/dinosaur-03.png" alt="">
             </div>
             <div class="sectionR" data-dinosaurid="3">
@@ -964,7 +968,7 @@
             <div class="section-bg" data-dinosaurid="4">
                 <img data-dinosaurid="4" src="img/dinosaur-bg-04.jpg" alt="">
             </div>
-            <div class="section-img" data-dinosaurid="4">
+            <div class="section-img" data-dinosaurid="4" style="width: 60%"> 
                 <img src="img/dinosaur-04.png" alt="">
             </div>
             <div class="sectionR" data-dinosaurid="4">
@@ -976,9 +980,9 @@
 
 
             <div class="section-bg" data-dinosaurid="5">
-                <img data-dinosaurid="1" src="img/dinosaur-bg-05.jpg" alt="">
+                <img data-dinosaurid="1" src="img/dinosaur-bg-05.jpg" alt="" >
             </div>
-            <div class="section-img" data-dinosaurid="5">
+            <div class="section-img" data-dinosaurid="5" style="top: 10%; right: 10%;">
                 <img src="img/dinosaur-05.png" alt="">
             </div>
             <div class="sectionR" data-dinosaurid="5">
@@ -991,7 +995,7 @@
             <div class="section-bg" data-dinosaurid="6">
                 <img data-dinosaurid="1" src="img/dinosaur-bg-06.jpg" alt="">
             </div>
-            <div class="section-img" data-dinosaurid="6">
+            <div class="section-img" data-dinosaurid="6" style="width: 60%">
                 <img src="img/dinosaur-06.png" alt="">
             </div>
             <div class="sectionR" data-dinosaurid="6">
@@ -1004,7 +1008,7 @@
             <div class="section-bg" data-dinosaurid="7">
                 <img data-dinosaurid="1" src="img/dinosaur-bg-07.jpg" alt="">
             </div>
-            <div class="section-img" data-dinosaurid="7">
+            <div class="section-img" data-dinosaurid="7" style="width: 60%; top: 20% ">
                 <img src="img/dinosaur-07.png" alt="">
             </div>
             <div class="sectionR" data-dinosaurid="7">
@@ -1018,7 +1022,7 @@
             <div class="section-bg" data-dinosaurid="8">
                 <img data-dinosaurid="1" src="img/dinosaur-bg-08.jpg" alt="">
             </div>
-            <div class="section-img" data-dinosaurid="8">
+            <div class="section-img" data-dinosaurid="8" style="width: 60%">
                 <img src="img/dinosaur-08.png" alt="">
             </div>
             <div class="sectionR" data-dinosaurid="8">
@@ -1033,7 +1037,7 @@
             <div class="section-bg" data-dinosaurid="9">
                 <img data-dinosaurid="1" src="img/dinosaur-bg-09.jpg" alt="">
             </div>
-            <div class="section-img" data-dinosaurid="9">
+            <div class="section-img" data-dinosaurid="9" style="width: 60%">
                 <img src="img/dinosaur-09.png" alt="">
             </div>
             <div class="sectionR" data-dinosaurid="9">
@@ -1073,7 +1077,7 @@
                 <img data-dinosaurid="1" src="img/dinosaur-bg-12.jpg" alt="">
             </div>
             <div class="section-img" data-dinosaurid="12">
-                <img src="img/dinosaur-12.png" alt="">
+                <img src="img/dinosaur-12.png" alt="" style="max-height: 500px;">
             </div>
             <div class="sectionR" data-dinosaurid="12">
                 <h1>腕龍</h1>
