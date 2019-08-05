@@ -653,17 +653,10 @@
     <script>
         var btn = document.querySelector('.menu');
         var menu_page = document.querySelector('.menu_page');
-    
-        btn.onclick=function () {
-            if (menu_page.style.display==="none") {
-                menu_page.style.display="block";
-            } 
-            else {
-                menu_page.style.display="none";
-            }
+        btn.onclick = function () {
+            menu_page.classList.toggle("active");
         }
-        
-        </script>
+    </script>
 
 </body>
 
