@@ -13,57 +13,67 @@
         body{
             margin: 0;
         }
-     #no{
-         position: fixed;
-         right: 20px;
-         top: 300px;
-         background-image: url(img/warning.png);
-         cursor: no-drop;
-         width: 90px;
-         height: 60px;
-         background-size: 90px;
-         background-repeat: no-repeat;
-         animation: shake 2s infinite ease;
-     }
-     @keyframes shake{
-         0%{
-             transform: rotate(30deg);
-         }
-         50%{
-            transform: rotate(25deg);
-         }
-         100%{
-            transform: rotate(30deg);
-         }
-     }
-     #dinosaurs{
-         position: fixed;
-         top: 300px;
-         right: -955px;
-         animation: show 10s  ease ;
-         display: none;
-         filter: drop-shadow(-20px 30px 10px );
-     }
-     @keyframes show{
-         0%{
+  /* 恐龍動畫 */
+  #no {
             position: fixed;
-            right: -955px;
-         }
-         40%{
-            position: fixed;
-            right: -435px;
-         }
-         70%{
-            position: fixed;
-            right: -835px;
-         }
+            right: 40px;
+            bottom: 200px;
+            background-image: url(img/warning.png);
+            cursor: no-drop;
+            width: 90px;
+            height: 60px;
+            background-size: 90px;
+            background-repeat: no-repeat;
+            animation: shake 2s infinite ease;
+            z-index: 98;
+        }
 
-         100%{
+        @keyframes shake {
+            0% {
+                transform: rotate(30deg);
+            }
+
+            50% {
+                transform: rotate(25deg);
+            }
+
+            100% {
+                transform: rotate(30deg);
+            }
+        }
+
+        #dinosaurs {
+            width: 70%;
             position: fixed;
-            right: -955px;
-         }
-     }
-     
+            bottom: 0;
+            right: -100%;
+            animation: show 10s ease;
+            display: none;
+            filter: drop-shadow(-20px 30px 10px);
+            z-index: 99;
+        }
+
+        @keyframes show {
+            0% {
+                position: fixed;
+                right: -100%;
+            }
+
+            40% {
+                position: fixed;
+                right: -22%;
+            }
+
+            70% {
+                position: fixed;
+                right: -50%;
+            }
+
+            100% {
+                position: fixed;
+                right: -100%;
+            }
+        }
     </style>
 </head>
 <body>

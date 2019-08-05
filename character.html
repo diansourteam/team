@@ -304,6 +304,67 @@
 
             }
         }
+  /* 恐龍動畫 */
+  #no {
+            position: fixed;
+            right: 40px;
+            bottom: 200px;
+            background-image: url(img/warning.png);
+            cursor: no-drop;
+            width: 90px;
+            height: 60px;
+            background-size: 90px;
+            background-repeat: no-repeat;
+            animation: shake 2s infinite ease;
+            z-index: 98;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: rotate(30deg);
+            }
+
+            50% {
+                transform: rotate(25deg);
+            }
+
+            100% {
+                transform: rotate(30deg);
+            }
+        }
+
+        #dinosaurs {
+            width: 70%;
+            position: fixed;
+            bottom: 0;
+            right: -100%;
+            animation: show 10s ease;
+            display: none;
+            filter: drop-shadow(-20px 30px 10px);
+            z-index: 99;
+        }
+
+        @keyframes show {
+            0% {
+                position: fixed;
+                right: -100%;
+            }
+
+            40% {
+                position: fixed;
+                right: -22%;
+            }
+
+            70% {
+                position: fixed;
+                right: -50%;
+            }
+
+            100% {
+                position: fixed;
+                right: -100%;
+            }
+        }
     </style>
 </head>
 
@@ -613,6 +674,8 @@
             <a href="character.html#dinosaur" target="_self">恐龍介紹</a>
         </div>
     </nav>
+    <div id="no"></div>
+    <img id="dinosaurs" src="img/p06jhmnh.png" alt="">
     <section id="hat">
         <div class="hat"><img style="width: 140px" src="img/hat.png" alt=""></div>
     </section>
@@ -1263,5 +1326,13 @@
             menu_page.classList.toggle("active");
         }
     </script>
+     <script>
+        var no = document.querySelector('#no');
+        var show = document.querySelector('#dinosaurs');
+        no.onclick=function () {
+         show.style.display='block';  
+        no.style.display='none';
+        }
+        </script>
 </body>
 </html>

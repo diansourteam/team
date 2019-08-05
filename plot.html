@@ -247,6 +247,91 @@
         footer {
             margin-bottom: 100px;
         }
+       
+    /* 恐龍動畫 */
+    #no {
+            position: fixed;
+            right: 40px;
+            bottom: 200px;
+            background-image: url(img/warning.png);
+            cursor: no-drop;
+            width: 90px;
+            height: 60px;
+            background-size: 90px;
+            background-repeat: no-repeat;
+            animation: shake 2s infinite ease;
+            z-index: 98;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: rotate(30deg);
+            }
+
+            50% {
+                transform: rotate(25deg);
+            }
+
+            100% {
+                transform: rotate(30deg);
+            }
+        }
+
+        #dinosaurs {
+            width: 70%;
+            position: fixed;
+            bottom: 0;
+            right: -100%;
+            animation: show 10s ease;
+            display: none;
+            filter: drop-shadow(-20px 30px 10px);
+            z-index: 99;
+        }
+
+        @keyframes show {
+            0% {
+                position: fixed;
+                right: -100%;
+            }
+
+            40% {
+                position: fixed;
+                right: -22%;
+            }
+
+            70% {
+                position: fixed;
+                right: -50%;
+            }
+
+            100% {
+                position: fixed;
+                right: -100%;
+            }
+        }
+     /* 影片 */
+     #video_container{
+         width: 1280px;
+         margin: 0 auto;
+     }
+     @media(max-width:1200px){
+        #video_container{
+            width: 640px;
+        }
+        #video{
+            width: 640px;
+            height: 360px;
+        }
+     }
+     @media(max-width:640px){
+        #video_container{
+            width: 320px;
+        }
+        #video{
+            width: 320px;
+            height: 180px;
+        }
+     }
     </style>
 </head>
 
@@ -558,7 +643,8 @@
             <a href="plot.html#video" target="_self">彩蛋花絮</a>
         </div>
     </nav>
-
+    <div id="no"></div>
+    <img id="dinosaurs" src="img/p06jhmnh.png" alt="">
     <div class="all-story" id="synopsis">
 
         <!-- <div class="story-group group1">
@@ -659,7 +745,8 @@
             </div>
         </div>
         <hr>
-        <div class="story-video" id="video">
+        <div class="story-video" id="video_container">
+                <iframe id="video" width="1280" height="720"  src="https://www.youtube.com/embed/ZHO5avMl43s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         </div>
         <footer>
@@ -715,6 +802,16 @@
             menu_page.classList.toggle("active");
         }
     </script>
+    <script>
+        var no = document.querySelector('#no');
+        var show = document.querySelector('#dinosaurs');
+        
+        no.onclick=function () {
+         show.style.display='block';  
+        no.style.display='none';
+        }
+        
+        </script>
 
 </body>
 

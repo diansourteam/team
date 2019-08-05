@@ -19,7 +19,7 @@
             margin: 0 auto;
             padding-top: 250px;
         }
-        
+
         .main {
             width: 100%;
             max-width: 1200px;
@@ -30,7 +30,8 @@
             float: left;
             position: relative;
         }
-        .commodity img{
+
+        .commodity img {
             display: block;
         }
 
@@ -95,26 +96,32 @@
 
         .mobile_mainR {
             display: none;
-            
+            width: 70%;
+            padding: 10px;
+            margin: 0 auto;
+            color: white;
+            text-align: center;
         }
-        .mobile_mainL{
+
+        .mobile_mainL {
             width: 70%;
             color: white;
             position: absolute;
             left: 15%;
-           bottom: -10%;
-        display: none;
+            bottom: -20%;
+            display: none;
         }
 
         #top_h3,
-        #mid_h3{
+        #mid_h3 {
             width: 160px;
             color: white;
             margin: 45px auto;
             display: none;
             text-align: center;
         }
-        #bottom_h3{
+
+        #bottom_h3 {
             width: 160px;
             color: white;
             margin: 110px auto 45px auto;
@@ -133,6 +140,7 @@
             margin-bottom: 90px;
             display: none;
         }
+
         #bottom_hr {
             width: 80%;
             margin-bottom: 90px;
@@ -146,7 +154,8 @@
         .clear {
             clear: both;
         }
-        .information{
+
+        .information {
             width: 290px;
             margin: 45px auto;
             padding: 5px;
@@ -164,7 +173,9 @@
             #top_hr,
             #mid_h3,
             #mid_hr,
-            #bottom_h3,#bottom_hr,.information {
+            #bottom_h3,
+            #bottom_hr,
+            .information {
                 display: block;
             }
 
@@ -181,8 +192,71 @@
                 display: none;
             }
 
-            .mobile_mainR,.mobile_mainL {
+            .mobile_mainR,
+            .mobile_mainL {
                 display: block;
+            }
+        }
+
+        /* 恐龍動畫 */
+    #no {
+            position: fixed;
+            right: 40px;
+            bottom: 200px;
+            background-image: url(img/warning.png);
+            cursor: no-drop;
+            width: 90px;
+            height: 60px;
+            background-size: 90px;
+            background-repeat: no-repeat;
+            animation: shake 2s infinite ease;
+            z-index: 98;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: rotate(30deg);
+            }
+
+            50% {
+                transform: rotate(25deg);
+            }
+
+            100% {
+                transform: rotate(30deg);
+            }
+        }
+
+        #dinosaurs {
+            width: 70%;
+            position: fixed;
+            bottom: 0;
+            right: -100%;
+            animation: show 10s ease;
+            display: none;
+            filter: drop-shadow(-20px 30px 10px);
+            z-index: 99;
+        }
+
+        @keyframes show {
+            0% {
+                position: fixed;
+                right: -100%;
+            }
+
+            40% {
+                position: fixed;
+                right: -22%;
+            }
+
+            70% {
+                position: fixed;
+                right: -50%;
+            }
+
+            100% {
+                position: fixed;
+                right: -100%;
             }
         }
     </style>
@@ -258,7 +332,8 @@
                 <a href="series.html" target="_self" style="font-size:18px; margin-top:40px;">SERIES</a>
                 <a href="series.html#filmSeries" target="_self" style="font-size:12px; margin-top:20px;">FILM SERIES</a>
                 <a href="information.html" target="_self" style="font-size:18px; margin-top:40px;">INFORMATION</a>
-                <a href="information.html#merchandies" target="_self" style="font-size:12px; margin-top:20px;">MERCHANDIES</a>
+                <a href="information.html#merchandies" target="_self"
+                    style="font-size:12px; margin-top:20px;">MERCHANDIES</a>
                 <a href="information.html#director" target="_self" style="font-size:12px; margin-top:10px;">DIRECTOR</a>
             </div>
         </div>
@@ -487,15 +562,18 @@
                 </a>
             </div>
         </div>
-        <img class="left_decor" width="100px" style="position: absolute;top: 100px; left: 10px" src="img/LeftDecor-03.png" alt="">
+        <img class="left_decor" width="100px" style="position: absolute;top: 100px; left: 10px"
+            src="img/LeftDecor-03.png" alt="">
         <div class="black_item" style="color: rgb(255, 255, 255);text-align: center;">
             <a href="information.html#merchandies" target="_self">周邊商品</a>
             <hr>
             <a href="information.html#director" target="_self">導演敘事</a>
         </div>
     </nav>
+    <div id="no"></div>
+    <img id="dinosaurs" src="img/p06jhmnh.png" alt="">
     <div class="container">
-        <h3 id="top_h3" >MERCHANDIES</h3>
+        <h3 id="top_h3">MERCHANDIES</h3>
         <hr id="top_hr">
         </hr>
         <div class="main" id="merchandies">
@@ -548,7 +626,8 @@
             <div class="mobile_mainR">
                 <img src="img/09Bayona.jpg" width="100%" alt="">
             </div>
-            <div class="mobile_mainL">
+            <div class="mobile_mainL"></div>
+            <div class="mobile_mainR">
                 <p>
                     <br>胡安·安東尼奧·巴亞納特別擅長驚悚和災難題材，
                     <br>能在恐怖電影中塑造出令人從頭寒到腳的恐怖感，
@@ -557,19 +636,20 @@
                     <br>故事煽情催淚，動靜平分秋色，細節處理得非常精緻到位 。
                 </p>
             </div>
+
         </div>
         <h3 id="bottom_h3">INFORMATION</h3>
         <hr id="bottom_hr">
     </div>
     <div class="clear"></div>
     <div class="information">
-            <a href=""><img src="img/fb_icon-01.png" style="width: 80px;margin: 5px;" alt=""></a>
-            <a href=""><img src="img/youtube2_icon.png" style="width: 80px;margin: 5px;" alt=""></a>
-            <a href=""><img src="img/tt_icon-01.png" style="width: 80px;margin: 5px;" alt=""></a>
-            <br>
-            <a href=""><img src="img/wiki_icon-01.png" style="width: 80px;margin: 5px;" alt=""></a>
-            <a href=""><img src="img/IMDB_icon-01.png" style="width: 80px;margin: 5px;" alt=""></a>
-            <a href=""><img src="img/ig_icon-01.png" style="width: 80px;margin: 5px;" alt=""></a>
+        <a href=""><img src="img/fb_icon-01.png" style="width: 80px;margin: 5px;" alt=""></a>
+        <a href=""><img src="img/youtube2_icon.png" style="width: 80px;margin: 5px;" alt=""></a>
+        <a href=""><img src="img/tt_icon-01.png" style="width: 80px;margin: 5px;" alt=""></a>
+        <br>
+        <a href=""><img src="img/wiki_icon-01.png" style="width: 80px;margin: 5px;" alt=""></a>
+        <a href=""><img src="img/IMDB_icon-01.png" style="width: 80px;margin: 5px;" alt=""></a>
+        <a href=""><img src="img/ig_icon-01.png" style="width: 80px;margin: 5px;" alt=""></a>
     </div>
     <footer>
         <div class="footer_logo"><img src="img/Jurassic_icon2.png" alt=""></div>
@@ -587,27 +667,31 @@
 
         <div class="footer_R">
             <ul>
-                <li><a href="plot.html" target="_self"style="font-size:24px; color: white;">Plot</a> </li>
+                <li><a href="plot.html" target="_self" style="font-size:24px; color: white;">Plot</a> </li>
                 <br>
-                <li><a href="plot.html#synopsis" target="_self"style="font-size:20px; color: white;">synopsis</a></li>
-                <li><a href="plot.html#video" target="_self"style="font-size:20px; color: white;">vedio</a></li>
+                <li><a href="plot.html#synopsis" target="_self" style="font-size:20px; color: white;">synopsis</a></li>
+                <li><a href="plot.html#video" target="_self" style="font-size:20px; color: white;">vedio</a></li>
             </ul>
             <ul>
-                <li><a href="character.html" target="_self"style="font-size:24px; color: white;">Character</a></li>
+                <li><a href="character.html" target="_self" style="font-size:24px; color: white;">Character</a></li>
                 <br>
-                <li><a href="character.html#actor" target="_self"style="font-size:20px; color: white;">actor</a></li>
-                <li><a href="character.html#dinosaur" target="_self"style="font-size:20px; color: white;">dinosaur</a></li>
+                <li><a href="character.html#actor" target="_self" style="font-size:20px; color: white;">actor</a></li>
+                <li><a href="character.html#dinosaur" target="_self" style="font-size:20px; color: white;">dinosaur</a>
+                </li>
             </ul>
             <ul>
-                <li><a href="series.html" target="_self"style="font-size:24px; color: white;">Series</a></li>
+                <li><a href="series.html" target="_self" style="font-size:24px; color: white;">Series</a></li>
                 <br>
-                <li><a href="series.html#filmSeries" target="_self"style="font-size:20px; color: white;">Film series</a></li>
+                <li><a href="series.html#filmSeries" target="_self" style="font-size:20px; color: white;">Film
+                        series</a></li>
             </ul>
             <ul>
-                <li><a href="information.html" target="_self"style="font-size:24px; color: white;">Information</a></li>
+                <li><a href="information.html" target="_self" style="font-size:24px; color: white;">Information</a></li>
                 <br>
-                <li><a href="information.html#merchandies" target="_self"style="font-size:20px; color: white;">Merchandies</a></li>
-                <li><a href="information.html#director" target="_self"style="font-size:20px; color: white;">Director</a></li>
+                <li><a href="information.html#merchandies" target="_self"
+                        style="font-size:20px; color: white;">Merchandies</a></li>
+                <li><a href="information.html#director" target="_self"
+                        style="font-size:20px; color: white;">Director</a></li>
             </ul>
         </div>
         <div class="footer_B">
@@ -620,6 +704,14 @@
         var menu_page = document.querySelector('.menu_page');
         btn.onclick = function () {
             menu_page.classList.toggle("active");
+        }
+    </script>
+    <script>
+        var no = document.querySelector('#no');
+        var show = document.querySelector('#dinosaurs');
+        no.onclick = function () {
+            show.style.display = 'block';
+            no.style.display = 'none';
         }
     </script>
 </body>
