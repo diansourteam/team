@@ -78,7 +78,7 @@
 
         /* murri End */
 
-        #actor ,.section-all{
+        #actor{
             display: block;
         }
 
@@ -107,7 +107,7 @@
             z-index: 15;
         }
 
-        .swiper1.swiper-container {
+        .swiper-container {
             width: 400px;
             height: 100vh;
             padding-right: 100px;
@@ -125,7 +125,7 @@
             background-size: cover;
         }
 
-        .swiper-slide img{
+        .swiper-slide img {
             height: 100%;
         }
 
@@ -140,6 +140,21 @@
             display: block;
             margin: 0 auto;
             background-size: cover;
+        }
+
+        /* 背景，這邊不採用 */
+
+        .section-bg {
+            position: absolute;
+            width: 100%;
+            transition: 0.3s;
+            left: -300%;
+            border-radius: 0 5px 5px 0;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 3;
+            display: none;
         }
 
         .section-img{
@@ -163,6 +178,7 @@
             width: 30%;
             color: white;
             line-height: 27px;
+            /* background-color: rgb(0, 0, 0, 0.5); */
             border-radius: 0 5px 5px 0;
             z-index: 5;
         }
@@ -197,13 +213,12 @@
             #actor ,.section-all{
                 display: none;
             }
-            .swiper2 ,.swiper-slide p,.swiper-slide h1 {
+            .swiper2 , .swiper-slide p,.swiper-slide h1{
                 display: block;
             }
 
             .swiper2{
                 width: 60%;
-                height: 100VH;
             }
 
             .swiper2 .swiper-slide {
@@ -216,23 +231,20 @@
                 background-position: center;
                 background-size: cover;
                 justify-content: center;
+                overflow: hidden;
                 align-items: center;
-            
             }
             
-            .swiper-slide img{
-                height: auto;
-                margin-bottom: 30%;
+            .swiper2 .swiper-slide img{
+    
+                top: 0%;
             }
 
             /* 人名 */
             .swiper2 .swiper-slide .title {
-            max-width: 400px;
-            line-height: 1.3;
-            text-align: center;
-            position: absolute;
-            top: 65%;
-            
+                max-width: 400px;
+                line-height: 1.3;
+                text-align: center;
             }
 
             /* 介紹 */
@@ -240,10 +252,8 @@
             max-width: 400px;
             line-height: 1.3;
             text-align: center;
-            position: absolute;
-            top: 72%;
             }
-
+            
 
             /* 恐龍部分 */
 
@@ -258,7 +268,7 @@
                 top: 10%;
             }
 
-            .swiper1.swiper-container {
+            .swiper-container {
                 width: 100%;
                 height: 70vh;
                 margin: 50px auto;
@@ -283,12 +293,6 @@
                 max-width: 50%;
                 max-height: 50%;
                 overflow: hidden;
-            }
-
-            @media(max-width: 700px){
-                .swiper2 .swiper-slide{
-                    width:  100%;
-                }
             }
         }
     </style>
@@ -979,7 +983,9 @@
 
         <div class="foot"><img style="width: 140px" src="img/foot.png" alt=""></div>
         <div class="section-all">
-
+            <div class="section-bg now_useing" data-dinosaurid="1">
+                <img src="img/dinosaur-bg-01.jpg" alt="">
+            </div>
             <div class="section-img now_useing" data-dinosaurid="1" style="top: -15%; right: 10%;">
                 <img src="img/dinosaur-01.png" alt="">
             </div>
@@ -990,7 +996,9 @@
                 <p>這種史前深海裡的頂級掠食者什麼海洋生物都吃。牠有雙鉸式的上下顎，可以將嘴巴張得老大，連蛇頸龍和大白鯊都能一口吞進。牠們其實並不算是恐龍，而是海生爬行動物。</P>
             </div>
 
-   
+            <div class="section-bg" data-dinosaurid="2">
+                <img data-dinosaurid="2" src="img/dinosaur-bg-02.jpg" alt="">
+            </div>
             <div class="section-img" data-dinosaurid="2">
                 <img src="img/dinosaur-02.png" alt="">
             </div>
@@ -1002,6 +1010,9 @@
             </div>
 
 
+            <div class="section-bg" data-dinosaurid="3">
+                <img data-dinosaurid="3" src="img/dinosaur-bg-03.jpg" alt="">
+            </div>
             <div class="section-img" data-dinosaurid="3" style="width: 60%">
                 <img src="img/dinosaur-03.png" alt="">
             </div>
@@ -1011,7 +1022,9 @@
                 <p>飲食:肉食動物</p>
                 <p>似鱷龍的背部有一個60公分高的帆狀物，牠也有一張很長的嘴巴（1.2米），以及30公分長的利爪，非常擅於獵捕魚類</p>
             </div>
-
+            <div class="section-bg" data-dinosaurid="4">
+                <img data-dinosaurid="4" src="img/dinosaur-bg-04.jpg" alt="">
+            </div>
             <div class="section-img" data-dinosaurid="4" style="width: 60%"> 
                 <img src="img/dinosaur-04.png" alt="">
             </div>
@@ -1022,6 +1035,10 @@
                 <p>科學家相信這隻兇猛的掠食性動物一口可以吞下230公斤的肉。暴龍的獵物的化石，包括三角龍和艾德蒙頓龍，顯示暴龍在吞食獵物時會咬碎牠們的骨頭，暴龍的糞便中也找到破碎的骨頭。</p>
             </div>
 
+
+            <div class="section-bg" data-dinosaurid="5">
+                <img data-dinosaurid="1" src="img/dinosaur-bg-05.jpg" alt="" >
+            </div>
             <div class="section-img" data-dinosaurid="5" style="top: 10%; right: 10%;">
                 <img src="img/dinosaur-05.png" alt="">
             </div>
@@ -1032,6 +1049,9 @@
                 <p>三角龍最顯著的特徵是牠巨大的頭顱，大約有1.2 到1.5米寬，上面有多根角，頭顱後方則有一塊頭盾。牠們會運用口鼻部上方的鼻角和眼睛上方的一對額角抵禦像是暴龍的掠食者，也會用來進行求偶儀式。</p>
             </div>
 
+            <div class="section-bg" data-dinosaurid="6">
+                <img data-dinosaurid="1" src="img/dinosaur-bg-06.jpg" alt="">
+            </div>
             <div class="section-img" data-dinosaurid="6" style="width: 60%">
                 <img src="img/dinosaur-06.png" alt="">
             </div>
@@ -1042,6 +1062,9 @@
                 <p>艾德蒙頓龍是扁頭鴨嘴的恐龍，也是深受暴龍威脅的獵物。牠們喜歡成群結隊在針葉林和其他植被上覓食。</p>
             </div>
 
+            <div class="section-bg" data-dinosaurid="7">
+                <img data-dinosaurid="1" src="img/dinosaur-bg-07.jpg" alt="">
+            </div>
             <div class="section-img" data-dinosaurid="7" style="width: 60%; top: 20% ">
                 <img src="img/dinosaur-07.png" alt="">
             </div>
@@ -1052,6 +1075,9 @@
                 <p>迅猛龍大概是最聰明的恐龍之一，因為牠具有相當大的大腦，牠是地表最強的掠食動物之一，就像牠的名字一樣，能夠迅速地移動。當牠站起來狂奔，時速可高達39公里。</p>
             </div>
 
+            <div class="section-bg" data-dinosaurid="8">
+                <img data-dinosaurid="1" src="img/dinosaur-bg-08.jpg" alt="">
+            </div>
             <div class="section-img" data-dinosaurid="8" style="width: 60%">
                 <img src="img/dinosaur-08.png" alt="">
             </div>
@@ -1064,6 +1090,9 @@
                 </p>
             </div>
 
+            <div class="section-bg" data-dinosaurid="9">
+                <img data-dinosaurid="1" src="img/dinosaur-bg-09.jpg" alt="">
+            </div>
             <div class="section-img" data-dinosaurid="9" style="width: 60%">
                 <img src="img/dinosaur-09.png" alt="">
             </div>
@@ -1074,6 +1103,9 @@
                 <p>劍龍脊椎上有17塊骨板，還有長著尖刺的有力尾巴，看起來很可怕，但主要作用還是防禦。劍龍前腳比後腳短，以方便吃到植物。</p>
             </div>
 
+            <div class="section-bg" data-dinosaurid="10">
+                <img data-dinosaurid="1" src="img/dinosaur-bg-10.jpg" alt="">
+            </div>
             <div class="section-img" data-dinosaurid="10">
                 <img src="img/dinosaur-10.png" alt="">
             </div>
@@ -1084,6 +1116,9 @@
                 <p>這種跑得快的恐龍頭很大，嘴裡沒有牙齒。雖然名字叫做「雞模仿者」，但牠們比較像恐龍鴕鳥，奔跑的速度可以和印度豹一樣快！似雞龍喜歡群聚，你可以在似雞龍骨看見牠們。</p>
             </div>
 
+            <div class="section-bg" data-dinosaurid="11">
+                <img data-dinosaurid="1" src="img/dinosaur-bg-11.jpg" alt="">
+            </div>
             <div class="section-img" data-dinosaurid="11">
                 <img src="img/dinosaur-11.png" alt="">
             </div>
@@ -1094,6 +1129,9 @@
                 <p>要比誰的頭最硬就不得不提厚頭龍了！厚頭龍的極厚頭顱一眼就可辨別，厚度可達25公分。雖然牠們的口鼻和頭顱都長有小瘤，但別擔心，牠們只吃水果和種子。</p>
             </div>
 
+            <div class="section-bg" data-dinosaurid="12">
+                <img data-dinosaurid="1" src="img/dinosaur-bg-12.jpg" alt="">
+            </div>
             <div class="section-img" data-dinosaurid="12">
                 <img src="img/dinosaur-12.png" alt="" style="max-height: 500px;">
             </div>
@@ -1106,9 +1144,9 @@
         </div>
     </div>
 
+
+
     <!-- 恐龍-END -->
-
-
 
     <footer>
         <div class="footer_logo"><img src="img/Jurassic_icon2.png" alt=""></div>
@@ -1184,7 +1222,6 @@
 <script>
     var swiper = new Swiper('.swiper2', {
       speed: 600,
-      loop: true,
       parallax: true,
       pagination: {
         el: '.swiper-pagination2',
@@ -1241,8 +1278,8 @@
             $(".swiper-slide[data-dinosaurid=" + dinosaurid + "]").addClass("now_useing");
         });
     </script>
-    <!-- 恐龍點擊相關-END -->
 
+    <!-- 恐龍點擊相關-END -->
     <script>
         var btn = document.querySelector('.menu');
         var menu_page = document.querySelector('.menu_page');
