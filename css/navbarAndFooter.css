@@ -66,6 +66,10 @@ body {
         color: white;
         direction:rtl; 
     }
+
+    .menu_page.active{
+        display: block;
+    }
     
     .menu_page_a a{
         display: block;

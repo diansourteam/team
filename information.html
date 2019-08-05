@@ -30,6 +30,9 @@
             float: left;
             position: relative;
         }
+        .commodity img{
+            display: block;
+        }
 
         .commodity::before {
             content: attr(data-th)"";
@@ -79,7 +82,6 @@
             line-height: 40px;
             letter-spacing: 2px;
             float: left;
-
         }
 
         .mainR {
@@ -617,12 +619,15 @@
         var btn = document.querySelector('.menu');
         var menu_page = document.querySelector('.menu_page');
         btn.onclick = function () {
-            if (menu_page.style.display === "none") {
-                menu_page.style.display = "block";
-            }
-            else {
-                menu_page.style.display = "none";
-            }
+            console.log(menu_page.style);
+            
+            // if (menu_page.style.display === "none") {
+            //     menu_page.style.display = "block";
+            // }
+            // else {
+            //     menu_page.style.display = "none";
+            // }
+            // menu_page.classList.toggle("active");
         }
 
     </script>
