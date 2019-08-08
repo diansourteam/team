@@ -1355,18 +1355,23 @@
         }
     </script>
 
-<!-- 
+
     <script>
+
         $(window).scroll(function () {
             var leftH = $(window).scrollTop();
-            /* nav切換時機 */
-        if(leftH <= 3200) {
+            var leftW = $(window).width();
+
+            if (leftH <= 3200 && leftW <= 1400) {
+                $(".left_decor").css("display",  "none");
+            } else if (leftH <= 3200) {
                 $(".left_show").css("display", "block");
-        } else {
+            } else {
                 $(".left_show").css("display", "none");
-        }
+            }
         });
-    </script> -->
+        
+    </script>
 </body>
 
 </html>
